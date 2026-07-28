@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /contact
+Allow: /app/*
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.next/
+
+# Sitemaps
+Sitemap: https://agoodental.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
