@@ -1,12 +1,12 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import Image from 'next/image'
 import {
 
   FloatingParticles
 } from '@/components/dental-vectors'
+import { Button } from '../atom/Button'
 
 export function Hero() {
   return (
@@ -35,7 +35,7 @@ export function Hero() {
       <FloatingParticles className="opacity-25" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8 animate-slide-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 shadow-sm">
@@ -50,32 +50,43 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-foreground/75 max-w-lg leading-relaxed font-medium">
-              Agoo Dental streamlines your entire practice—from smart scheduling and patient records to instant payments and AI analytics. Join 500+ successful dental clinics today!
+              Agoo Dental streamlines your entire practice—from smart scheduling and patient records to instant payments and AI analytics. Join 50+ successful dental clinics today!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg font-bold shadow-xl shadow-primary/25 hover:shadow-2xl transition-all hover:scale-105">
-                Get Started Free <ArrowRight className="ml-2" size={20} />
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg font-semibold hover:bg-primary/10 border-border">
-                Schedule Live Demo
-              </Button>
-            </div>
+         
+<div className="flex flex-col sm:flex-row gap-4 pt-2">
+  <Button
+    size="lg"
+    linkHref='/contact'
+    className="h-14 px-8 sm:px-10 bg-primary hover:bg-primary/90 rounded-full text-primary-foreground text-base sm:text-lg font-bold shadow-xl shadow-primary/25 hover:shadow-2xl transition-all hover:scale-105"
+  >
+    Get Started Free
+    <ArrowRight className="ml-2" size={22} />
+  </Button>
 
-            <div className="flex flex-wrap gap-6 pt-6 text-sm text-foreground/70 font-medium">
-              <div className="flex items-center gap-2">
-                <span className="text-primary font-extrabold text-base">✓</span>
-                <span>No credit card required</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-primary font-extrabold text-base">✓</span>
-                <span>14-day full trial access</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-primary font-extrabold text-base">✓</span>
-                <span>Instant 2-min setup</span>
-              </div>
+  <Button
+    size="lg"
+    linkHref='/contact'
+    variant="outline"
+    className="h-14 px-8 sm:px-10 rounded-full text-base sm:text-lg font-semibold border-2 border-border hover:bg-primary/10 transition-all"
+  >
+    Book  Live Demo
+  </Button>
+</div>
+             <div className="pt-6 border-t border-border/60 flex flex-wrap  gap-4 sm:gap-8 text-xs sm:text-sm text-muted-foreground font-bold">
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+              <span>7-Day Full Access</span>
             </div>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+              <span>No Credit Card Required</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+              <span>Cancel Anytime</span>
+            </div>
+          </div>
           </div>
 
           {/* Right Dashboard Image with Floating Vectors */}
@@ -92,7 +103,7 @@ export function Hero() {
 
             <div className="relative rounded-2xl shadow-2xl overflow-hidden border border-border/80 bg-card group-hover:border-primary/50 transition-colors">
               <Image
-                src="/dashboard.png"
+                src="features/dashboard.png"
                 alt="DentaCare Practice Dashboard"
                 width={1200}
                 height={800}

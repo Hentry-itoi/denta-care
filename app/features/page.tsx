@@ -5,15 +5,15 @@ import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { 
   Calendar, Users, CreditCard, BarChart3, Lock, Settings, 
-  ArrowRight, Sparkles, CheckCircle2, Star
+  ArrowRight, CheckCircle2, Star
 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { Navbar } from '@/components/landing/navbar'
 import { Footer } from '@/components/landing/footer'
 import { 
   AnimatedTooth, AnimatedDentalMirror, AnimatedToothbrush, 
   AnimatedDentalChair, AnimatedShield, AnimatedHeartPulse, FloatingParticles 
 } from '@/components/dental-vectors'
+import { Button } from '@/components/atom/Button'
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null)
@@ -38,7 +38,7 @@ const allFeatures = [
     title: 'Smart Scheduling',
     tagline: 'Zero missed appointments. Zero wasted chair time.',
     description: 'Our AI-powered scheduling engine automatically optimizes dentist availability, chair utilization, and patient flow to maximize revenue.',
-    image: '/appointments.png',
+    image: '/features/appointments.png',
     color: 'from-primary to-emerald-400',
     bgColor: 'bg-primary/10',
     iconColor: 'text-primary',
@@ -63,7 +63,7 @@ const allFeatures = [
     title: 'Patient Records & Management',
     tagline: 'Complete patient story. One unified profile.',
     description: 'Manage comprehensive patient profiles with dental charts, X-ray history, treatment plans, allergies, and insurance details in one unified record.',
-    image: '/users.png',
+    image: '/features/users.png',
     color: 'from-primary via-cyan-400 to-emerald-400',
     bgColor: 'bg-primary/10',
     iconColor: 'text-primary',
@@ -77,7 +77,7 @@ const allFeatures = [
       'Family grouping for pediatric and family dentistry'
     ],
     stats: [
-      { value: '500+', label: 'Clinics trust us' },
+      { value: '50+', label: 'Clinics trust us' },
       { value: '2M+', label: 'Patient records managed' },
       { value: '99.9%', label: 'Data accuracy' }
     ]
@@ -88,7 +88,7 @@ const allFeatures = [
     title: 'Billing & Invoice Automation',
     tagline: 'Get paid faster. Bill smarter.',
     description: 'Generate professional dental invoices with itemized treatment breakdowns, process multi-method payments, and track overdue balances automatically.',
-    image: '/invoices.png',
+    image: '/features/invoices.png',
     color: 'from-emerald-500 to-teal-500',
     bgColor: 'bg-emerald-500/10',
     iconColor: 'text-emerald-500',
@@ -113,7 +113,7 @@ const allFeatures = [
     title: 'Real-time Analytics & Reports',
     tagline: 'See the data. Make the decisions.',
     description: 'Transform raw clinic data into visual dashboards with revenue trends, patient retention rates, treatment success metrics, and dentist productivity reports.',
-    image: '/reports.png',
+    image: '/features/reports.png',
     color: 'from-primary via-emerald-400 to-teal-500',
     bgColor: 'bg-primary/10',
     iconColor: 'text-primary',
@@ -138,8 +138,7 @@ const allFeatures = [
     title: 'HIPAA Security & Compliance',
     tagline: 'Bank-grade protection for patient data.',
     description: 'Built with healthcare-grade security from the ground up: 256-bit AES encryption, HIPAA compliance, role-based access control, and automated daily cloud backups.',
-    image: '/settings.png',
-    color: 'from-primary to-amber-400',
+    image: '/features/users.png',
     bgColor: 'bg-primary/10',
     iconColor: 'text-primary',
     vector: AnimatedShield,
@@ -163,7 +162,7 @@ const allFeatures = [
     title: 'Clinic Configuration & Workflow',
     tagline: 'Your clinic, your rules.',
     description: 'Customize every aspect of your dental practice: treatment templates, medicine catalogs, multi-location setup, branding, and automated workflow triggers.',
-    image: '/settings.png',
+    image: '/features/settings.png',
     color: 'from-emerald-500 via-teal-500 to-primary',
     bgColor: 'bg-emerald-500/10',
     iconColor: 'text-emerald-500',
@@ -201,7 +200,7 @@ export default function FeaturesPage() {
 
           <div className="max-w-5xl mx-auto text-center relative z-10 space-y-8">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold shadow-sm">
-              <Sparkles className="w-4 h-4" /> All Platform Capabilities
+            All Platform Capabilities
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
@@ -217,16 +216,12 @@ export default function FeaturesPage() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 pt-4">
-              <Link href="/#pricing">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+                <Button linkHref='/contact' size="lg" className="h-14 px-8 sm:px-10 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground text-base sm:text-lg font-bold shadow-xl shadow-primary/25 hover:shadow-2xl transition-all hover:scale-105">
                   Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-              </Link>
-              <Link href="/#gallery">
-                <Button size="lg" variant="outline" className="text-lg font-bold hover:bg-primary/10 border-border">
-                  View Live Demo
+                <Button linkHref='/contact' size="lg" variant="outline" className="h-14 px-8 sm:px-10 rounded-full border-2 border-border hover:bg-primary/10 text-base sm:text-lg font-semibold transition-all">
+                 Book Live Demo
                 </Button>
-              </Link>
             </div>
           </div>
         </section>
@@ -252,16 +247,12 @@ export default function FeaturesPage() {
               Join 500+ dental clinics who trust DentaCare to manage their operations, patients, and revenue growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/#pricing">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg font-bold shadow-xl">
+                <Button size="lg" linkHref='/contact' className="h-14 px-8 sm:px-10 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground text-base sm:text-lg font-bold shadow-xl shadow-primary/25 hover:shadow-2xl transition-all hover:scale-105">
                   Get Started Free <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-              </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="text-lg font-bold">
+                <Button size="lg" variant="outline" linkHref='/contact'  className="h-14 px-8 sm:px-10 rounded-full border-2 border-border hover:bg-primary/10 text-base sm:text-lg font-semibold transition-all">
                   Talk to Sales
                 </Button>
-              </Link>
             </div>
           </div>
         </section>
@@ -288,7 +279,7 @@ function FeatureSection({ feature, isEven, index }: { feature: typeof allFeature
       <div className={`absolute ${isEven ? 'top-10 -right-20' : 'top-10 -left-20'} w-96 h-96 bg-gradient-to-br from-primary/15 to-emerald-500/10 rounded-full blur-3xl opacity-20 animate-morph-blob`} />
 
       <div className="max-w-7xl mx-auto">
-        <div className={`grid lg:grid-cols-2 gap-16 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
+        <div className={`grid md:grid-cols-2 gap-16 items-center ${!isEven ? 'md:grid-flow-col-dense' : ''}`}>
 
           {/* Content Side */}
           <div className={`space-y-8 ${!isEven ? 'lg:col-start-2' : ''} ${isVisible ? (isEven ? 'animate-reveal-left' : 'animate-reveal-right') : 'opacity-0'}`}

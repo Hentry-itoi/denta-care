@@ -26,7 +26,7 @@ export function FAQ() {
     },
     {
       question: 'Can I try DentaCare before committing?',
-      answer: 'Yes! All plans come with a 14-day free trial. No credit card required. You get full access to all features during the trial period.'
+      answer: 'Yes! All plans come with a 7-Day free trial. No credit card required. You get full access to all features during the trial period.'
     },
     {
       question: 'Do you offer training for my team?',
@@ -52,7 +52,7 @@ export function FAQ() {
       <div className="max-w-3xl mx-auto relative z-10">
         <div className="text-center mb-16 space-y-4 animate-slide-up">
           <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight">
-            Frequently asked <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">questions</span>
+            Frequently Asked <span className="bg-gradient-to-r from-primary via-emerald-400 to-cyan-500 bg-clip-text text-transparent">Questions</span>
           </h2>
           <p className="text-xl text-foreground/70 font-medium">
             Everything you need to know about DentaCare
@@ -92,7 +92,7 @@ export function FAQ() {
           <p className="text-foreground/75 font-medium">
             Can't find the answer you're looking for? Our support team is here to help.
           </p>
-          <a href="#contact" className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
+          <a href="/contact" className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
             Contact our team <span>→</span>
           </a>
         </div>

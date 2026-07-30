@@ -4,10 +4,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { Lock, ArrowRight, ArrowLeft, Shield, Key, Server, Eye, Fingerprint, CloudOff } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { Navbar } from '@/components/landing/navbar'
 import { Footer } from '@/components/landing/footer'
 import { FloatingParticles } from '@/components/dental-vectors'
+import { Button } from '@/components/atom/Button'
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null)
@@ -41,12 +41,12 @@ export default function SecurityPage() {
           
           <FloatingParticles className="opacity-20" />
 
-          <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-reveal-left" style={{ animationFillMode: 'both' }}>
-              <Link href="/features" className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-bold">
+              <Link href="/features" className="flex w-fit items-center gap-2 text-sm text-primary hover:underline font-bold ml-4">
                 <ArrowLeft className="w-4 h-4" /> Back to All Features
               </Link>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider">
+               <div className="flex w-fit items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider">
                 <Lock className="w-4 h-4" /> Feature 05 — Security
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
@@ -57,15 +57,13 @@ export default function SecurityPage() {
                 Bank-grade encryption, HIPAA compliance, role-based access control, and automated 
                 daily cloud backups. Your patient data is 100% protected.
               </p>
-              <Link href="/#pricing">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg font-bold shadow-xl">
+                <Button size="lg" linkHref='/contact' className="h-14 px-8 sm:px-10 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground text-base sm:text-lg font-bold shadow-xl shadow-primary/25 hover:shadow-2xl transition-all hover:scale-105">
                   Get Secure Access <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-              </Link>
             </div>
             <div className="animate-reveal-right" style={{ animationFillMode: 'both', animationDelay: '0.2s' }}>
               <div className="relative rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl bg-card">
-                <Image src="/settings.png" alt="Security Settings" width={1200} height={800} className="w-full h-auto" priority />
+                <Image src="/features/users.png" alt="Security Settings" width={1200} height={800} className="w-full h-auto" priority />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
               </div>
             </div>
@@ -122,8 +120,12 @@ export default function SecurityPage() {
             Ready to <span className="bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent">Secure Your Practice?</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/#pricing"><Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg font-bold shadow-xl">Start Free Trial <ArrowRight className="ml-2" /></Button></Link>
-            <Link href="/features"><Button size="lg" variant="outline" className="text-lg font-bold">Explore All Features</Button></Link>
+              <Button size="lg" linkHref='/contact' className="h-14 px-8 sm:px-10 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground text-base sm:text-lg font-bold shadow-xl shadow-primary/25 hover:shadow-2xl transition-all hover:scale-105">
+                Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+              <Button size="lg" variant="outline" linkHref='/features' className="h-14 px-8 sm:px-10 rounded-full border-2 border-border hover:bg-primary/10 text-base sm:text-lg font-semibold transition-all">
+                Explore All Features
+              </Button>
           </div>
         </section>
       </main>

@@ -51,20 +51,66 @@ export function Testimonials() {
         'The multi-branch clinic feature simplified our operations across 3 locations. Exceptional customer support as well!',
       rating: 5,
     },
+    {
+      name: 'Dr. Vikram Joshi',
+      location: 'PUNE, IN',
+      initials: 'VJ',
+      badgeBg: 'bg-[#ec4899]',
+      content:
+        'The digital treatment plans and consent forms saved us tons of paper and time. Patients appreciate the transparent and modern approach!',
+      rating: 5,
+    },
+    {
+      name: 'Dr. Meera Nair',
+      location: 'KOCHI, IN',
+      initials: 'MN',
+      badgeBg: 'bg-[#06b6d4]',
+      content:
+        'Managing inventory and lab orders used to be a headache. DentaCare streamlined everything into a few quick clicks.',
+      rating: 5,
+    },
+    {
+      name: 'Dr. Rohan Verma',
+      location: 'CHENNAI, IN',
+      initials: 'RV',
+      badgeBg: 'bg-[#8b5cf6]',
+      content:
+        'Our appointment no-show rate dropped significantly thanks to the automated SMS and WhatsApp reminders. Truly a game changer!',
+      rating: 5,
+    },
+    {
+      name: 'Dr. Kavita Reddy',
+      location: 'AHMEDABAD, IN',
+      initials: 'KR',
+      badgeBg: 'bg-[#10b981]',
+      content:
+        'The cloud backup and top-tier security give me peace of mind. I can access patient records securely from anywhere.',
+      rating: 5,
+    },
+    {
+      name: 'Dr. Siddharth Mehta',
+      location: 'JAIPUR, IN',
+      initials: 'SM',
+      badgeBg: 'bg-[#f97316]',
+      content:
+        'Clean interface, quick response time, and zero learning curve for new staff. Best investment we made for our dental practice this year.',
+      rating: 5,
+    },
   ]
 
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const CARDS_PER_PAGE = 3
+  const totalPages = Math.ceil(testimonials.length / CARDS_PER_PAGE)
+
+  const [currentPage, setCurrentPage] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
 
-  const maxIndex = testimonials.length - 1
-
   const handleNext = useCallback(() => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1))
-  }, [maxIndex])
+    setCurrentPage((prev) => (prev >= totalPages - 1 ? 0 : prev + 1))
+  }, [totalPages])
 
   const handlePrev = useCallback(() => {
-    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1))
-  }, [maxIndex])
+    setCurrentPage((prev) => (prev <= 0 ? totalPages - 1 : prev - 1))
+  }, [totalPages])
 
   useEffect(() => {
     if (isPaused) return
@@ -79,26 +125,15 @@ export function Testimonials() {
       id="testimonials"
       className="relative py-24 px-4 sm:px-6 lg:px-8 bg-background border-y border-border/80 overflow-hidden"
     >
-      {/* Interactive Vectors */}
-      {/* <div className="absolute top-10 left-8 z-20 hidden md:block opacity-90">
-        <AnimatedTooth size={70} />
-      </div>
-      <div className="absolute bottom-10 right-8 z-20 hidden md:block opacity-90">
-        <AnimatedDentalMirror size={65} />
-      </div>
-      <div className="absolute top-1/2 right-6 -translate-y-1/2 z-20 hidden xl:block opacity-80">
-        <AnimatedHeartPulse size={80} />
-      </div> */}
-
       <FloatingParticles className="opacity-15" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-12 space-y-3">
           <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
-            Loved by dental{' '}
+            Loved By Dental{' '}
             <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">
-              professionals
+              Professionals
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
@@ -117,7 +152,7 @@ export function Testimonials() {
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
+                transform: `translateX(-${currentPage * 100}%)`,
               }}
             >
               {testimonials.map((testimonial, idx) => (
@@ -126,7 +161,6 @@ export function Testimonials() {
                   className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                 >
                   <div className="relative flex flex-col justify-between h-full rounded-3xl bg-card border border-border p-8 shadow-sm transition-all hover:border-emerald-500/50 hover:shadow-xl">
-                    
                     {/* Top Row: Stars + Quote Icon */}
                     <div>
                       <div className="flex items-center justify-between mb-6">
@@ -171,36 +205,37 @@ export function Testimonials() {
           </div>
 
           {/* Navigation Controls & Dots */}
-          <div className="flex items-center justify-between mt-8 pt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-4">
+            {/* Arrow Buttons */}
             <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={handlePrev}
-                aria-label="Previous Slide"
-                className="p-3 rounded-full border border-border bg-card text-foreground hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-all shadow-md"
+                aria-label="Previous Page"
+                className="p-3 rounded-full border border-border bg-card text-foreground hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-all shadow-md active:scale-95"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 type="button"
                 onClick={handleNext}
-                aria-label="Next Slide"
-                className="p-3 rounded-full border border-border bg-card text-foreground hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-all shadow-md"
+                aria-label="Next Page"
+                className="p-3 rounded-full border border-border bg-card text-foreground hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-all shadow-md active:scale-95"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
 
-            {/* Pagination Indicators */}
+            {/* Page Pagination Dots (1 Dot = 3 Cards) */}
             <div className="flex items-center gap-2">
-              {testimonials.map((_, idx) => (
+              {Array.from({ length: totalPages }).map((_, pageIdx) => (
                 <button
-                  key={idx}
+                  key={pageIdx}
                   type="button"
-                  onClick={() => setCurrentIndex(idx)}
-                  aria-label={`Go to slide ${idx + 1}`}
+                  onClick={() => setCurrentPage(pageIdx)}
+                  aria-label={`Go to page ${pageIdx + 1}`}
                   className={`h-2.5 rounded-full transition-all duration-300 ${
-                    currentIndex === idx
+                    currentPage === pageIdx
                       ? 'w-8 bg-emerald-500'
                       : 'w-2.5 bg-muted hover:bg-emerald-500/50'
                   }`}

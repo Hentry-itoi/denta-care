@@ -4,8 +4,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { Maximize2, X, Check, ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { FloatingParticles } from '@/components/dental-vectors'
+import { Button } from '../atom/Button'
 
 interface SystemModule {
   id: string
@@ -24,7 +24,7 @@ const systemModules: SystemModule[] = [
     title: 'Executive Dashboard & Overview',
     subtitle: 'Real-time clinic metrics & schedule',
     category: 'Operations',
-    image: '/dashboard.png',
+    image: 'features/dashboard.png',
     badge: 'Core Hub',
     description: 'Get an instant 360° overview of your practice with real-time revenue stats, pending invoices, and daily patient queues.',
     keyFeatures: ['Live revenue counters', 'Quick action shortcuts', 'Patient activity timeline', 'Multi-dentist schedule']
@@ -34,7 +34,7 @@ const systemModules: SystemModule[] = [
     title: 'Smart Appointment Scheduling',
     subtitle: 'Drag-and-drop calendar & reminders',
     category: 'Operations',
-    image: '/appointments.png',
+    image: 'features/appointments.png',
     badge: 'Scheduling',
     description: 'Manage doctor schedules effortlessly. Track appointment statuses and eliminate double-booking with conflict detection.',
     keyFeatures: ['Daily & weekly views', 'Automated SMS reminders', 'Chair assignment', 'Check-in tracker']
@@ -44,7 +44,7 @@ const systemModules: SystemModule[] = [
     title: 'User & Staff Management',
     subtitle: 'Role-based access control for staff',
     category: 'Administration',
-    image: '/users.png',
+    image: 'features/users.png',
     badge: 'Security',
     description: 'Grant precise permissions to clinic staff. Manage dentist availability, working hours, and monitor user login logs securely.',
     keyFeatures: ['Granular role permissions', 'Staff duty rosters', 'HIPAA compliant logs', 'Multi-branch switching']
@@ -54,7 +54,7 @@ const systemModules: SystemModule[] = [
     title: 'Payment Processing Center',
     subtitle: 'Seamless multi-method tracking',
     category: 'Financials',
-    image: '/payments.png',
+    image: 'features/payments.png',
     badge: 'Payments',
     description: 'Accept cash, cards, online transfers, and insurance payouts. Track partial payments and overdue balances instantly.',
     keyFeatures: ['Split-payment support', 'Instant confirmation', 'Insurance claim tracking', 'Gateway integration']
@@ -64,7 +64,7 @@ const systemModules: SystemModule[] = [
     title: 'Automated Invoicing & Billing',
     subtitle: 'Itemized treatment breakdown',
     category: 'Financials',
-    image: '/invoices.png',
+    image: 'features/invoices.png',
     badge: 'Billing',
     description: 'Generate itemized invoices for treatments. Send PDF receipts directly to patients via email or WhatsApp.',
     keyFeatures: ['Itemized procedure billing', 'Tax & discount calculation', 'PDF download & export', 'Automated payment links']
@@ -74,7 +74,7 @@ const systemModules: SystemModule[] = [
     title: 'Clinic Expense Tracking',
     subtitle: 'Categorized expenditure management',
     category: 'Financials',
-    image: '/expenses.png',
+    image: 'features/expenses.png',
     badge: 'Accounting',
     description: 'Log operational costs such as lab fees, equipment maintenance, staff salaries, and supply inventory purchases.',
     keyFeatures: ['Expense tagging', 'Receipt uploads', 'Monthly expense breakdown', 'Profitability analysis']
@@ -84,7 +84,7 @@ const systemModules: SystemModule[] = [
     title: 'Comprehensive Analytics',
     subtitle: 'In-depth financial & retention reports',
     category: 'Administration',
-    image: '/reports.png',
+    image: 'features/reports.png',
     badge: 'Analytics',
     description: 'Make data-driven decisions with detailed reports on monthly profits, treatment success rates, and staff performance.',
     keyFeatures: ['Exportable Excel & PDF', 'Patient acquisition stats', 'Revenue graphs', 'Dentist productivity']
@@ -94,7 +94,7 @@ const systemModules: SystemModule[] = [
     title: 'System & Practice Settings',
     subtitle: 'Custom treatment templates & setup',
     category: 'Administration',
-    image: '/settings.png',
+    image: 'features/settings.png',
     badge: 'Configuration',
     description: 'Customize DentaCare to match your exact clinic workflow. Configure procedure lists, medicine catalogs, and branding.',
     keyFeatures: ['Procedure price lists', 'Prescription templates', 'Clinic logo upload', 'Multi-location settings']
@@ -121,7 +121,7 @@ export function ImageGallery() {
             Comprehensive Visual Showcase
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-            Explore All <span className="bg-gradient-to-r from-primary via-cyan-400 to-secondary bg-clip-text text-transparent">System Modules & Screens</span>
+            Explore All <span className="bg-gradient-to-r from-primary via-emerald-400 to-cyan-500 bg-clip-text text-transparent">System Modules & Screens</span>
           </h2>
           <p className="text-foreground/75 text-lg font-medium">
             Take a guided visual tour through all 8 core application modules powering modern, high-performing dental clinics.
@@ -214,54 +214,55 @@ export function ImageGallery() {
           ))}
         </div>
 
-        {/* Modal Lightbox Popup */}
-        {previewImage && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
-            <div className="relative max-w-5xl w-full bg-card border border-border rounded-2xl overflow-hidden shadow-2xl space-y-4 p-4 sm:p-6">
-              
-              {/* Modal Top Bar */}
-              <div className="flex items-center justify-between border-b border-border pb-4">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-bold">
-                      {previewImage.badge}
-                    </span>
-                    <h3 className="text-xl font-bold text-foreground">{previewImage.title}</h3>
-                  </div>
-                  <p className="text-xs text-foreground/60">{previewImage.subtitle}</p>
+      </div>
+
+      {/* Modal Lightbox Popup */}
+      {previewImage && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+          <div className="relative max-w-5xl w-full bg-card border border-border rounded-2xl overflow-hidden shadow-2xl space-y-4 p-4 sm:p-6">
+            
+            {/* Modal Top Bar */}
+            <div className="flex items-center justify-between border-b border-border pb-4">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-bold">
+                    {previewImage.badge}
+                  </span>
+                  <h3 className="text-xl font-bold text-foreground">{previewImage.title}</h3>
                 </div>
-                <button
-                  onClick={() => setPreviewImage(null)}
-                  className="p-2 rounded-lg bg-muted hover:bg-muted/80 text-foreground transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+                <p className="text-xs text-foreground/60">{previewImage.subtitle}</p>
               </div>
+              <button
+                onClick={() => setPreviewImage(null)}
+                className="p-2 rounded-lg bg-muted hover:bg-muted/80 text-foreground transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
 
-              {/* Full Image */}
-              <div className="relative rounded-xl overflow-hidden border border-border bg-black max-h-[70vh] flex items-center justify-center">
-                <Image
-                  src={previewImage.image}
-                  alt={previewImage.title}
-                  width={1400}
-                  height={900}
-                  className="w-full h-auto max-h-[70vh] object-contain"
-                />
-              </div>
+            {/* Full Image */}
+            <div className="relative rounded-xl overflow-hidden border border-border bg-black max-h-[70vh] flex items-center justify-center">
+              <Image
+                src={previewImage.image}
+                alt={previewImage.title}
+                width={1400}
+                height={900}
+                className="w-full h-auto max-h-[70vh] object-contain"
+              />
+            </div>
 
-              {/* Modal Footer */}
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-                <p className="text-xs text-foreground/70">{previewImage.description}</p>
-                <a href="#pricing" onClick={() => setPreviewImage(null)}>
-                  <Button size="sm" className="bg-primary hover:bg-primary/90">
-                    Get Started with {previewImage.badge} <ArrowRight className="w-4 h-4 ml-1" />
-                  </Button>
-                </a>
+            {/* Modal Footer */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+              <p className="text-xs text-foreground/70">{previewImage.description}</p>
+              <div onClick={() => setPreviewImage(null)}>
+                <Button linkHref='/contact' size="sm" className="bg-primary hover:bg-primary/90">
+                  Get Started with {previewImage.badge} <ArrowRight className="w-4 h-4 ml-1" />
+                </Button>
               </div>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </section>
   )
 }

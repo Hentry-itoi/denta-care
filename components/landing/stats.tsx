@@ -6,19 +6,19 @@ import { FloatingParticles } from '@/components/dental-vectors'
 export function Stats() {
   const stats = [
     {
-      value: '500+',
+      value: '50+',
       label: 'Dental Practices',
       description: 'Trusted by clinics nationwide',
       icon: Building2,
     },
     {
-      value: '150K+',
+      value: '10K+',
       label: 'Patient Records',
       description: 'Securely stored and managed',
       icon: Users,
     },
     {
-      value: '₹50Cr+',
+      value: '₹2Cr+',
       label: 'Payments Processed',
       description: 'With 99.9% reliability',
       icon: CreditCard,
@@ -49,9 +49,9 @@ export function Stats() {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-3">
           <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">
-            Trusted by{' '}
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-              dental professionals
+            Trusted By{' '}
+            <span className="bg-gradient-to-r from-primary via-emerald-400 to-cyan-500 bg-clip-text text-transparent">
+              Dental Professionals
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

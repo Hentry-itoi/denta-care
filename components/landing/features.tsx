@@ -88,7 +88,7 @@ export function Features() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16 space-y-4 animate-slide-up">
           <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight">
-            Everything you need to <span className="bg-gradient-to-r from-primary via-emerald-400 to-cyan-500 bg-clip-text text-transparent">run your practice</span>
+            Everything You Need To <span className="bg-gradient-to-r from-primary via-emerald-400 to-cyan-500 bg-clip-text text-transparent">Run Your Practice</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto font-medium">
             Comprehensive features designed for modern, high-volume dental clinics

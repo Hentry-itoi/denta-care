@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Check } from 'lucide-react'
 import {  FloatingParticles } from '@/components/dental-vectors'
+import Link from 'next/link'
 
 export function Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
@@ -148,9 +149,9 @@ export function Pricing() {
         {/* Header Section */}
         <div className="text-center space-y-4">
           <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight">
-            Simple, transparent{' '}
+            Simple, Transparent{' '}
             <span className="bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">
-              pricing
+              Pricing
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
@@ -163,7 +164,7 @@ export function Pricing() {
               <button
                 type="button"
                 onClick={() => setBillingCycle('monthly')}
-                className={`px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 ${
+                className={`px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 cursor-pointer ${
                   billingCycle === 'monthly'
                     ? 'bg-background text-foreground shadow-md'
                     : 'text-muted-foreground hover:text-foreground'
@@ -175,7 +176,7 @@ export function Pricing() {
               <button
                 type="button"
                 onClick={() => setBillingCycle('yearly')}
-                className={`flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 ${
+                className={`flex items-center gap-2 px-6 py-2.5 cursor-pointer rounded-xl text-sm font-bold transition-all duration-200 ${
                   billingCycle === 'yearly'
                     ? 'bg-background text-foreground shadow-md'
                     : 'text-muted-foreground hover:text-foreground'
@@ -191,7 +192,7 @@ export function Pricing() {
         </div>
 
         {/* 3 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
           {activePlans.map((plan, idx) => (
             <div
               key={idx}
@@ -239,17 +240,18 @@ export function Pricing() {
                     {plan.billingText}
                   </p>
                 </div>
-
+<Link href='/contact'>
                 <Button
-                  className={`w-full font-bold py-6 text-base ${
+                  className={`w-full font-bold py-6 text-base cursor-pointer ${
                     plan.popular
                       ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/25'
-                      : 'border border-border bg-background hover:bg-accent'
+                      : 'border border-border bg-background hover:bg-accent hover:text-white'
                   }`}
                   variant={plan.popular ? 'default' : 'outline'}
                 >
                   {plan.cta}
                 </Button>
+                </Link>
 
                 <div className="border-t border-border/60 pt-6 space-y-3.5 flex-1">
                   {plan.features.map((feature, featureIdx) => (
@@ -269,7 +271,7 @@ export function Pricing() {
         {/* Footer Note */}
         <div className="text-center text-muted-foreground font-semibold">
           <p className="text-xs">
-            All plans include a 14-day free trial. No credit card required.
+            All plans include a 7-Day free trial. No credit card required.
           </p>
         </div>
       </div>

@@ -1,8 +1,8 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import { ArrowRight, Calendar, CheckCircle2 } from 'lucide-react'
 import {  FloatingParticles } from '@/components/dental-vectors'
+import { Button } from '../atom/Button'
 
 export function CTA() {
   return (
@@ -42,9 +42,9 @@ export function CTA() {
 
           {/* Headline */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground max-w-3xl mx-auto leading-[1.15]">
-            Ready to elevate your{' '}
-            <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">
-              dental practice?
+            Ready To Elevate Your{' '}
+            <span className="bg-gradient-to-r from-primary via-emerald-400 to-cyan-500 bg-clip-text text-transparent">
+              Dental Practice?
             </span>
           </h2>
 
@@ -57,19 +57,21 @@ export function CTA() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
             <Button
               size="lg"
+              linkHref='/contact'
               className="w-full sm:w-auto h-14 px-8 text-base font-extrabold bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl shadow-lg shadow-emerald-600/25 transition-all hover:scale-[1.03] active:scale-[0.98]"
             >
-              Start 14-Day Free Trial
+              Start 7-Day Free Trial
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             
             <Button
               size="lg"
+              linkHref='/contact'
               variant="outline"
-              className="w-full sm:w-auto h-14 px-8 text-base font-bold border-border hover:bg-accent text-foreground rounded-xl transition-all"
+              className="w-full sm:w-auto h-14 px-8 text-base font-bold border-border hover:bg-accent text-foreground hover:text-white rounded-xl transition-all"
             >
-              <Calendar className="mr-2 w-5 h-5 text-emerald-500" />
-              Schedule Live Demo
+              <Calendar className="mr-2 w-5 h-5 text-emerald-500 hover:text-white" />
+              Book  Live Demo
             </Button>
           </div>
 
@@ -77,7 +79,7 @@ export function CTA() {
           <div className="pt-6 border-t border-border/60 flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-xs sm:text-sm text-muted-foreground font-bold">
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-              <span>14-Day Full Access</span>
+              <span>7-Day Full Access</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-500" />

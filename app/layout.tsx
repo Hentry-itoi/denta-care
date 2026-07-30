@@ -98,7 +98,11 @@ export default function RootLayout({
         <SchemaMarkup />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <meta name="format-detection" content="telephone=no" />
+
+        <link rel="icon" href="/agoo-logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/agoo-logo.png" />
+        <meta property="og:image" content="/agoo-logo.png" />
+        <meta name="twitter:image" content="/agoo-logo.png" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

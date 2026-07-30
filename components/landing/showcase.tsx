@@ -19,56 +19,56 @@ const screenshots = [
     id: 1,
     title: 'Dashboard Overview',
     description: 'Get instant insights with real-time metrics, upcoming appointments, recent invoices, and activity feeds.',
-    image: '/dashboard.png',
+    image: 'features/dashboard.png',
     highlight: 'Revenue tracking and quick access to all clinic data',
   },
   {
     id: 2,
     title: 'Smart Scheduling',
     description: 'Manage appointments with our intuitive calendar interface. View daily, weekly, or monthly schedules.',
-    image: '/appointments.png',
+    image: 'features/appointments.png',
     highlight: 'Never miss an appointment with automated reminders',
   },
   {
     id: 3,
     title: 'User Management',
     description: 'Manage your team with role-based access control. Track logins and keep your clinic organized.',
-    image: '/users.png',
+    image: 'features/users.png',
     highlight: 'Control who has access to what with granular permissions',
   },
   {
     id: 4,
     title: 'Payment Processing',
     description: 'Track all patient payments in one place. Support multiple payment methods and payment statuses.',
-    image: '/payments.png',
+    image: 'features/payments.png',
     highlight: 'Reduce payment processing time by 80%',
   },
   {
     id: 5,
     title: 'Invoice Management',
     description: 'Generate, send, and track invoices automatically. Get detailed payment tracking and history.',
-    image: '/invoices.png',
+    image: 'features/invoices.png',
     highlight: 'Professional invoices sent automatically to patients',
   },
   {
     id: 6,
     title: 'Expense Tracking',
     description: 'Monitor clinic expenses across categories. Track spending and manage your operational costs.',
-    image: '/expenses.png',
+    image: 'features/expenses.png',
     highlight: 'Better financial visibility and cost control',
   },
   {
     id: 7,
     title: 'Comprehensive Reports',
     description: 'Access detailed analytics including patient, payment, expense, and appointment reports.',
-    image: '/reports.png',
+    image: 'features/reports.png',
     highlight: 'Data-driven insights for better business decisions',
   },
   {
     id: 8,
     title: 'System Settings',
     description: 'Configure medicines, locations, templates, and system-wide preferences from one place.',
-    image: '/settings.png',
+    image: 'features/settings.png',
     highlight: 'Customize every aspect to match your workflow',
   },
 ]
@@ -142,7 +142,7 @@ export function Showcase() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Left side - Shadcn Carousel */}
           <div className="relative">
             <Carousel
