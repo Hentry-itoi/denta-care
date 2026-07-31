@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Heart, Share2, Briefcase, Mail } from 'lucide-react'
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -19,18 +19,32 @@ export function Footer() {
               The all-in-one platform for modern dental practices. Simplify management, enhance patient care, and grow your business.
             </p>
             <div className="flex items-center gap-4 pt-4">
-              <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
-                <Heart size={20} />
-              </a>
-              <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
-                <Share2 size={20} />
-              </a>
-              <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
-                <Briefcase size={20} />
-              </a>
-              <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
-                <Mail size={20} />
-              </a>
+               <a
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-foreground/60 hover:text-green-500 transition-colors"
+    aria-label="WhatsApp"
+  >
+    <FaWhatsapp size={20} />
+  </a>
+
+  <a
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-foreground/60 hover:text-pink-500 transition-colors"
+    aria-label="Instagram"
+  >
+    <FaInstagram size={20} />
+  </a>
+
+  <a
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-foreground/60 hover:text-blue-600 transition-colors"
+    aria-label="Facebook"
+  >
+    <FaFacebook size={20} />
+  </a>
             </div>
           </div>
 
@@ -62,10 +76,8 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-6">Legal</h4>
             <ul className="space-y-3 text-sm text-foreground/60">
-              <li><a href="#" className="hover:text-primary transition-colors">Privacy</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Terms</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Security</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">HIPAA</a></li>
+              <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy</Link></li>
+              <li><Link href="/terms" className="hover:text-primary transition-colors">Terms</Link></li>
             </ul>
           </div>
         </div>
@@ -76,9 +88,8 @@ export function Footer() {
             © {currentYear} Agoo Dental. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-primary transition-colors">Cookie Policy</a>
+            <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
