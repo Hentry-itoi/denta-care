@@ -52,11 +52,11 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-6">Product</h4>
             <ul className="space-y-3 text-sm text-foreground/60">
-              <li><Link href="#features" className="hover:text-primary transition-colors">Features</Link></li>
-              <li><Link href="#pricing" className="hover:text-primary transition-colors">Pricing</Link></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Security</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Integrations</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Roadmap</a></li>
+              <li><Link href="/features" className="hover:text-primary transition-colors">Features</Link></li>
+              <li><Link href="/#pricing" className="hover:text-primary transition-colors">Pricing</Link></li>
+              <li><Link href="/features/security" className="hover:text-primary transition-colors">Security</Link></li>
+              <li><Link href="/#gallery" className="hover:text-primary transition-colors">Gallery</Link></li>
+              <li><Link href="/#faq" className="hover:text-primary transition-colors">FAQ</Link></li>
             </ul>
           </div>
 
@@ -64,11 +64,9 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-6">Company</h4>
             <ul className="space-y-3 text-sm text-foreground/60">
-              <li><a href="#" className="hover:text-primary transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">About</Link></li>
+              <li><Link href="/#testimonials" className="hover:text-primary transition-colors">Testimonials</Link></li>
               <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Press</a></li>
             </ul>
           </div>
 
