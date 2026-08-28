@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Settings, ArrowRight, ArrowLeft, Pill, MapPin, Palette, Workflow, ListTree, Building2 } from 'lucide-react'
 import { Navbar } from '@/components/landing/navbar'
 import { Footer } from '@/components/landing/footer'
-import { FloatingParticles } from '@/components/dental-vectors'
+// import { FloatingParticles } from '@/components/dental-vectors'
 import { Button } from '@/components/atom/Button'
 
 function useInView(threshold = 0.15) {
@@ -39,7 +39,7 @@ export default function SettingsPage() {
           <div className="absolute top-10 right-0 w-80 h-80 bg-gradient-to-br from-primary/20 to-emerald-400/20 rounded-full blur-3xl animate-morph-blob opacity-30" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-500/15 to-primary/15 rounded-full blur-3xl animate-morph-blob opacity-20" style={{ animationDelay: '3s' }} />
           
-          <FloatingParticles className="opacity-20" />
+          {/* <FloatingParticles className="opacity-20" /> */}
 
           <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-reveal-left" style={{ animationFillMode: 'both' }}>

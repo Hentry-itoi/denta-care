@@ -1,35 +1,35 @@
-'use client'
+"use client";
 
-import { Building2, Users, CreditCard, Zap } from 'lucide-react'
-import { FloatingParticles } from '@/components/dental-vectors'
+import { Building2, Users, CreditCard, Zap } from "lucide-react";
+// import { FloatingParticles } from "@/components/dental-vectors";
 
 export function Stats() {
   const stats = [
     {
-      value: '50+',
-      label: 'Dental Practices',
-      description: 'Trusted by clinics nationwide',
+      value: "50+",
+      label: "Dental Practices",
+      description: "Trusted by clinics nationwide",
       icon: Building2,
     },
     {
-      value: '10K+',
-      label: 'Patient Records',
-      description: 'Securely stored and managed',
+      value: "10K+",
+      label: "Patient Records",
+      description: "Securely stored and managed",
       icon: Users,
     },
     {
-      value: '₹2Cr+',
-      label: 'Payments Processed',
-      description: 'With 99.9% reliability',
+      value: "₹2Cr+",
+      label: "Payments Processed",
+      description: "With 99.9% reliability",
       icon: CreditCard,
     },
     {
-      value: '99.9%',
-      label: 'Platform Uptime',
-      description: 'Enterprise-grade reliability',
+      value: "99.9%",
+      label: "Platform Uptime",
+      description: "Enterprise-grade reliability",
       icon: Zap,
     },
-  ]
+  ];
 
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-emerald-500/[0.03] to-background border-y border-border/60 overflow-hidden">
@@ -43,26 +43,27 @@ export function Stats() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-8 hidden xl:block">
         <AnimatedDNAHelix size={140} />
       </div> */}
-      <FloatingParticles className="opacity-10" />
+      {/* <FloatingParticles className="opacity-10" /> */}
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-3">
           <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">
-            Trusted By{' '}
+            Trusted By{" "}
             <span className="bg-gradient-to-r from-primary via-emerald-400 to-cyan-500 bg-clip-text text-transparent">
               Dental Professionals
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our platform powers practices of all sizes with enterprise-grade reliability
+            Our platform powers practices of all sizes with enterprise-grade
+            reliability
           </p>
         </div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, idx) => {
-            const IconComponent = stat.icon
+            const IconComponent = stat.icon;
             return (
               <div
                 key={idx}
@@ -91,10 +92,10 @@ export function Stats() {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

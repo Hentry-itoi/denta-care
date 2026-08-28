@@ -1,7 +1,7 @@
 'use client'
 
 import { ArrowRight, Calendar, CheckCircle2 } from 'lucide-react'
-import {  FloatingParticles } from '@/components/dental-vectors'
+// import {  FloatingParticles } from '@/components/dental-vectors'
 import { Button } from '../atom/Button'
 
 export function CTA() {
@@ -24,7 +24,7 @@ export function CTA() {
         <AnimatedAligner size={85} />
       </div> */}
 
-      <FloatingParticles className="opacity-20" />
+      {/* <FloatingParticles className="opacity-20" /> */}
 
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Glowing Outer Card Container */}
@@ -58,7 +58,7 @@ export function CTA() {
             <Button
               size="lg"
               linkHref='/contact'
-              className="w-full sm:w-auto h-14 px-8 text-base font-extrabold bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl shadow-lg shadow-emerald-600/25 transition-all hover:scale-[1.03] active:scale-[0.98]"
+              className="w-full sm:w-auto h-14 px-8 text-base font-extrabold"
             >
               Start 7-Day Free Trial
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -68,7 +68,7 @@ export function CTA() {
               size="lg"
               linkHref='/contact'
               variant="outline"
-              className="w-full sm:w-auto h-14 px-8 text-base font-bold border-border hover:bg-accent text-foreground hover:text-white rounded-xl transition-all"
+              className="w-full sm:w-auto h-14 px-8 text-base font-bold"
             >
               <Calendar className="mr-2 w-5 h-5 text-emerald-500 hover:text-white" />
               Book  Live Demo
