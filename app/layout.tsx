@@ -2,8 +2,8 @@ import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { SchemaMarkup } from "./schema";
 import "./globals.css";
-import Script from "next/script";
 import { WhatsAppSticky } from "@/components/atom/WhatsAppSticky";
+import { Navbar, Footer } from "@/components/common/landing";
 
 export const metadata: Metadata = {
   title: "Agoo Dental - Professional Dental Practice Management Software",
@@ -120,11 +120,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/agoo-logo.png" />
         <meta property="og:image" content="/agoo-logo.png" />
         <meta name="twitter:image" content="/agoo-logo.png" />
-      </head>
-      <body className="antialiased">
-        <Script
+        <script
           id="theme-sw-script"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -147,7 +144,13 @@ export default function RootLayout({
             `,
           }}
         />
-        {children}
+      </head>
+      <body className="antialiased flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-1 pt-16">
+          {children}
+        </main>
+        <Footer />
         <WhatsAppSticky />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>

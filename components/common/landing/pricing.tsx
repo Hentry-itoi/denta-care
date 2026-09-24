@@ -241,10 +241,9 @@ export function Pricing() {
                         {plan.period}
                       </span>
                     )}
-                    {/* @ts-ignore - dynamic property */}
-                    {plan.discount && (
+                    {'discount' in plan && Boolean(plan.discount) && (
                       <span className="ml-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase whitespace-nowrap">
-                        {plan.discount}
+                        {String(plan.discount)}
                       </span>
                     )}
                   </div>

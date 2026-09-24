@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Maximize2, X, Check, ArrowRight } from "lucide-react";
 // import { FloatingParticles } from "@/components/dental-vectors";
-import { Button } from "../atom/Button";
+import { Button } from '@/components/atom';
 
 interface SystemModule {
   id: string;

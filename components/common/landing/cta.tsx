@@ -2,7 +2,7 @@
 
 import { ArrowRight, Calendar, CheckCircle2 } from 'lucide-react'
 // import {  FloatingParticles } from '@/components/dental-vectors'
-import { Button } from '../atom/Button'
+import { Button } from '@/components/atom'
 
 export function CTA() {
   return (
