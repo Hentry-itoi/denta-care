@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import {
   Menu,
   X,
@@ -19,12 +20,11 @@ import {
   HelpCircle,
   PhoneCall,
   DollarSign,
-  Sun,
-  Moon,
 } from "lucide-react";
 import { Button } from "@/components/atom/Button";
 
 export function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<
     "features" | "pages" | null
@@ -32,24 +32,31 @@ export function Navbar() {
   const [mobileExpanded, setMobileExpanded] = useState<
     "features" | "pages" | null
   >(null);
-  const [isDark, setIsDark] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
 
-  // Initialize theme from DOM (set by inline script in layout)
   useEffect(() => {
-    setIsDark(document.documentElement.classList.contains("dark"));
-  }, []);
+    const handleScroll = () => {
+      const sections = ["features", "gallery", "pricing", "testimonials"];
+      let current = "";
+      if (window.scrollY < 200 && window.location.pathname === "/") {
+        current = "home";
+      } else {
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= 200 && rect.bottom >= 200) {
+              current = section;
+            }
+          }
+        }
+      }
+      setActiveSection(current);
+    };
 
-  const toggleTheme = useCallback(() => {
-    const html = document.documentElement;
-    if (html.classList.contains("dark")) {
-      html.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      setIsDark(false);
-    } else {
-      html.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      setIsDark(true);
-    }
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navRef = useRef<HTMLDivElement>(null);
@@ -121,7 +128,7 @@ export function Navbar() {
     {
       icon: DollarSign,
       title: "Pricing Plans",
-      desc: "Flexible tiers for solo & multi-dentist clinics",
+      desc: "Flexible tiers for solo & multi-doctor clinics",
       href: "/#pricing",
     },
     {
@@ -133,7 +140,7 @@ export function Navbar() {
     {
       icon: MessageSquare,
       title: "Testimonials",
-      desc: "Stories from top dental practice owners",
+      desc: "Stories from top clinic practice owners",
       href: "/#testimonials",
     },
     {
@@ -162,7 +169,7 @@ export function Navbar() {
             <Link href="/" className="flex items-center gap-2 group">
               <Image
                 src="/agoo-logo.png"
-                alt="Agoo Dental Logo"
+                alt="Agoo Clinic Logo"
                 width={130}
                 height={52}
                 className="h-9 w-auto transition-transform group-hover:scale-105"
@@ -173,6 +180,17 @@ export function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-1 lg:gap-2">
+            {/* Direct Navigation Links */}
+            <Link
+              href="/"
+              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                activeSection === "home"
+                  ? "text-primary underline decoration-2 underline-offset-8"
+                  : "text-foreground/80 hover:text-foreground hover:bg-muted/50"
+              }`}
+            >
+              Home
+            </Link>
             {/* Features Dropdown */}
             <div className="relative">
               <button
@@ -184,6 +202,8 @@ export function Navbar() {
                 className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-300 ease-out ${
                   activeDropdown === "features"
                     ? "text-primary bg-primary/10 shadow-sm shadow-primary/10"
+                    : activeSection === "features"
+                    ? "text-primary underline decoration-2 underline-offset-8"
                     : "text-foreground/80 hover:text-foreground hover:bg-primary/5 hover:shadow-sm hover:-translate-y-0.5 active:scale-95"
                 }`}
               >
@@ -285,25 +305,41 @@ export function Navbar() {
             {/* Direct Navigation Links */}
             <a
               href="/#gallery"
-              className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors"
+              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                activeSection === "gallery"
+                  ? "text-primary underline decoration-2 underline-offset-8"
+                  : "text-foreground/80 hover:text-foreground hover:bg-muted/50"
+              }`}
             >
               UI Gallery
             </a>
             <a
               href="/#pricing"
-              className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors"
+              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                activeSection === "pricing"
+                  ? "text-primary underline decoration-2 underline-offset-8"
+                  : "text-foreground/80 hover:text-foreground hover:bg-muted/50"
+              }`}
             >
               Pricing
             </a>
             <a
               href="/#testimonials"
-              className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors"
+              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                activeSection === "testimonials"
+                  ? "text-primary underline decoration-2 underline-offset-8"
+                  : "text-foreground/80 hover:text-foreground hover:bg-muted/50"
+              }`}
             >
               Testimonials
             </a>
             <Link
               href="/contact"
-              className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors"
+              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                pathname === "/contact"
+                  ? "text-primary underline decoration-2 underline-offset-8"
+                  : "text-foreground/80 hover:text-foreground hover:bg-muted/50"
+              }`}
             >
               Contact
             </Link>
@@ -311,23 +347,6 @@ export function Navbar() {
 
           {/* CTA Buttons + Theme Toggle */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg border-2 border-primary/20 hover:border-primary/50 bg-background/50 backdrop-blur-sm hover:bg-primary/10 transition-all duration-300 ease-out shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-95"
-              aria-label={
-                isDark ? "Switch to light mode" : "Switch to dark mode"
-              }
-            >
-              {isDark ? (
-                <Sun className="w-4 h-4 text-amber-400" />
-              ) : (
-                <Moon className="w-4 h-4 text-blue-500" />
-              )}
-              <span className="text-xs font-semibold text-foreground">
-                {isDark ? "Light" : "Dark"}
-              </span>
-            </button>
 
             <a href="/#pricing">
               <Button
@@ -339,21 +358,8 @@ export function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Theme Toggle + Menu Toggle */}
+          {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg border-2 border-primary/20 bg-background/50 backdrop-blur-sm hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 ease-out shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-95"
-              aria-label={
-                isDark ? "Switch to light mode" : "Switch to dark mode"
-              }
-            >
-              {isDark ? (
-                <Sun className="w-5 h-5 text-amber-400" />
-              ) : (
-                <Moon className="w-5 h-5 text-blue-500" />
-              )}
-            </button>
             <button
               className="p-2 rounded-lg hover:bg-primary/10 text-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 active:scale-95"
               onClick={() => setIsOpen(!isOpen)}
@@ -438,6 +444,13 @@ export function Navbar() {
 
             {/* Quick Links */}
             <div className="grid grid-cols-2 gap-2 pt-2">
+              <Link
+                href="/"
+                onClick={() => setIsOpen(false)}
+                className="px-3 py-2 text-xs font-medium text-center rounded-lg bg-muted text-foreground"
+              >
+                Home
+              </Link>
               <a
                 href="/#gallery"
                 onClick={() => setIsOpen(false)}

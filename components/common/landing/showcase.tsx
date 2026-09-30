@@ -91,10 +91,10 @@ export function Showcase() {
     <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-muted/30 to-background overflow-hidden border-t border-border/80">
       {/* Decorative Interactive Vector Accents */}
       {/* <div className="absolute top-10 left-6 z-20 hidden md:block">
-        <AnimatedTooth size={70} />
+        <AnimatedHealth size={70} />
       </div>
       <div className="absolute bottom-12 right-6 z-20 hidden md:block">
-        <AnimatedDentalMirror size={65} />
+        <AnimatedClinicMirror size={65} />
       </div>
       <div className="absolute top-1/2 right-4 -translate-y-1/2 z-20 hidden xl:block">
         <AnimatedAligner size={80} />
@@ -114,7 +114,7 @@ export function Showcase() {
             </span>
           </h2>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto font-medium">
-            See how DentaCare transforms your dental practice management with
+            See how Agoo Clinic transforms your clinic practice management with
             beautiful, intuitive interfaces
           </p>
         </div>
@@ -133,7 +133,7 @@ export function Showcase() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-2xl" />
 
-              {/* Corner Tooth Decor */}
+              {/* Corner Health Decor */}
               {/* <div className="absolute top-3 right-3 z-30 opacity-90">
                 <AnimatedImplant size={55} />
               </div> */}

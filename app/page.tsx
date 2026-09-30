@@ -1,8 +1,8 @@
 import { CTA, FAQ, Features, Hero, ImageGallery, Pricing, Security, Showcase, Stats, Testimonials, TrustedBy } from "@/components/common/landing";
 
 export const metadata = {
-  title: 'Agoo Dental - Transform Your Dental Practice with AI & PWA Power',
-  description: 'The all-in-one platform for modern dental clinics. Manage appointments, patients, payments, invoices, expenses, and analytics with beautiful simplicity.',
+  title: 'Agoo Clinic - Transform Your Clinic Practice with AI & PWA Power',
+  description: 'The all-in-one platform for modern clinics. Manage appointments, patients, payments, invoices, expenses, and analytics with beautiful simplicity.',
 }
 
 export default function Home() {

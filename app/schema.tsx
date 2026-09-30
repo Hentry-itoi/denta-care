@@ -2,20 +2,20 @@ export function SchemaMarkup() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Agoo Dental',
-    url: 'https://agoodental.com',
-    logo: 'https://agoodental.com/agoo-logo.png',
-    description: 'Professional dental practice management software for modern clinics',
+    name: 'Agoo Clinic',
+    url: 'https://agooclinic.com',
+    logo: 'https://agooclinic.com/agoo-logo.png',
+    description: 'Professional clinic practice management software for modern clinics',
     sameAs: [
-      'https://twitter.com/agooDental',
-      'https://facebook.com/agooDental',
-      'https://linkedin.com/company/agooDental',
+      'https://twitter.com/agooClinic',
+      'https://facebook.com/agooClinic',
+      'https://linkedin.com/company/agooClinic',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-123-4567',
       contactType: 'Customer Service',
-      email: 'support@agoodental.com',
+      email: 'support@agooclinic.com',
     },
     address: {
       '@type': 'PostalAddress',
@@ -26,9 +26,9 @@ export function SchemaMarkup() {
   const softwareSchema = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'Agoo Dental',
-    description: 'All-in-one dental practice management software for scheduling, patients, payments, and analytics',
-    url: 'https://agoodental.com',
+    name: 'Agoo Clinic',
+    description: 'All-in-one clinic practice management software for scheduling, patients, payments, and analytics',
+    url: 'https://agooclinic.com',
     applicationCategory: 'BusinessApplication',
     offers: {
       '@type': 'Offer',
@@ -51,15 +51,15 @@ export function SchemaMarkup() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'How can Agoo Dental help my practice?',
+        name: 'How can Agoo Clinic help my practice?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Agoo Dental streamlines appointment scheduling, patient management, payment processing, and provides detailed analytics to help you grow your practice.',
+          text: 'Agoo Clinic streamlines appointment scheduling, patient management, payment processing, and provides detailed analytics to help you grow your practice.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Is my data secure with Agoo Dental?',
+        name: 'Is my data secure with Agoo Clinic?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Yes, we use enterprise-grade encryption and HIPAA-compliant security measures to protect all your patient data.',
@@ -67,7 +67,7 @@ export function SchemaMarkup() {
       },
       {
         '@type': 'Question',
-        name: 'Can I try Agoo Dental for free?',
+        name: 'Can I try Agoo Clinic for free?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Yes, we offer a 7-Day free trial with full access to all features. No credit card required.',

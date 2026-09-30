@@ -51,7 +51,7 @@ export function Security() {
         <AnimatedHeartPulse size={90} />
       </div>
       <div className="absolute top-1/2 right-12 -translate-y-1/2 z-20 hidden xl:block opacity-80">
-        <AnimatedTooth size={70} />
+        <AnimatedHealth size={70} />
       </div> */}
 
       {/* <FloatingParticles className="opacity-15" /> */}
@@ -70,7 +70,7 @@ export function Security() {
           </h2>
           <p className="text-foreground/75 text-lg font-medium">
             Bank-grade encryption, HIPAA compliance standards, and continuous
-            cloud backup so you can focus entirely on patient care.
+            cloud backup so you can focus entirely on patient management.
           </p>
         </div>
 

@@ -48,7 +48,7 @@ export default function Contact() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Get in Touch
             </h1>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">Have questions about DentaCare? We&apos;re here to help. Reach out to our team and we&apos;ll get back to you as soon as possible.</p>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">Have questions about Agoo Clinic? We&apos;re here to help. Reach out to our team and we&apos;ll get back to you as soon as possible.</p>
           </div>
 <section className="pb-24">
   <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
@@ -190,8 +190,8 @@ export default function Contact() {
         </h2>
 
         <p className="mt-4 max-w-md text-sm leading-6 text-primary-foreground/75">
-          Have questions about DentaCare? Our team is ready to help
-          you find the right solution for your dental practice.
+          Have questions about Agoo Clinic? Our team is ready to help
+          you find the right solution for your clinic practice.
         </p>
       </div>
 
@@ -200,7 +200,7 @@ export default function Contact() {
 
         {/* Email */}
         <a
-          href="mailto:hello@dentacare.com"
+          href="mailto:hello@agooclinic.com"
           className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm transition-all duration-300 hover:bg-white/15 hover:translate-x-1"
         >
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-primary shadow-sm">
@@ -213,7 +213,7 @@ export default function Contact() {
             </p>
 
             <p className="mt-1 truncate text-sm font-semibold">
-              hello@dentacare.com
+              hello@agooclinic.com
             </p>
           </div>
 
@@ -260,7 +260,7 @@ export default function Contact() {
             </p>
 
             <p className="mt-1 text-sm font-semibold">
-              123 Dental Square, NYC
+              123 Clinic Square, NYC
             </p>
           </div>
         </div>

@@ -20,7 +20,7 @@ export function TrustedBy() {
     <section className="relative overflow-hidden border-y border-border/80 bg-muted/20 px-4 py-16 sm:px-6 lg:px-8">
       <div className="relative z-10 mx-auto max-w-7xl">
         <h2 className="mb-10 text-center text-xs font-bold uppercase tracking-widest text-foreground/60">
-          Trusted by Top Dental Clinics & Health Networks
+          Trusted by Top Clinics & Health Networks
         </h2>
 
         <div className="flex flex-wrap items-center justify-center gap-6">

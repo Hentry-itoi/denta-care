@@ -5,7 +5,7 @@ import Link from 'next/link';
 export function WhatsAppSticky() {
   const phoneNumber = '919876543210'; // Replace with your actual WhatsApp number
   const message = encodeURIComponent(
-    'Hi! I\'m interested in Agoo Dental. Can you tell me more?'
+    'Hi! I\'m interested in Agoo Clinic. Can you tell me more?'
   );
 
   return (

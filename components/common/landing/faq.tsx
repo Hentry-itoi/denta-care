@@ -9,7 +9,7 @@ export function FAQ() {
 
   const faqs = [
     {
-      question: "How long does it take to set up DentaCare?",
+      question: "How long does it take to set up Agoo Clinic?",
       answer:
         "Most practices are up and running within 24-48 hours. Our onboarding team guides you through the entire process, and we handle data migration if needed.",
     },
@@ -19,9 +19,9 @@ export function FAQ() {
         "Absolutely. We're HIPAA compliant with bank-level encryption, daily backups, and regular security audits. Your data is our top priority.",
     },
     {
-      question: "Can I integrate DentaCare with my existing systems?",
+      question: "Can I integrate Agoo Clinic with my existing systems?",
       answer:
-        "Yes! We offer integrations with major dental software, payment processors, and practice management tools. Our API is also available for custom integrations.",
+        "Yes! We offer integrations with major clinic software, payment processors, and practice management tools. Our API is also available for custom integrations.",
     },
     {
       question: "What kind of support do you offer?",
@@ -29,7 +29,7 @@ export function FAQ() {
         "We provide email support for all plans, priority support for Professional and Enterprise, and 24/7 phone support for Enterprise customers.",
     },
     {
-      question: "Can I try DentaCare before committing?",
+      question: "Can I try Agoo Clinic before committing?",
       answer:
         "Yes! All plans come with a 7-Day free trial. No credit card required. You get full access to all features during the trial period.",
     },
@@ -45,15 +45,15 @@ export function FAQ() {
       id="faq"
       className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-muted/20 to-background overflow-hidden border-t border-border/80"
     >
-      {/* Dental Vectors */}
+      {/* Clinic Vectors */}
       {/* <div className="absolute top-12 left-6 z-20 hidden md:block opacity-90">
-        <AnimatedTooth size={75} />
+        <AnimatedHealth size={75} />
       </div>
       <div className="absolute bottom-12 right-6 z-20 hidden md:block opacity-90">
-        <AnimatedToothbrush size={85} />
+        <AnimatedHealthbrush size={85} />
       </div>
       <div className="absolute top-1/2 left-4 -translate-y-1/2 z-20 hidden xl:block opacity-80">
-        <AnimatedDentalMirror size={70} />
+        <AnimatedClinicMirror size={70} />
       </div> */}
 
       {/* <FloatingParticles className="opacity-15" /> */}
@@ -67,7 +67,7 @@ export function FAQ() {
             </span>
           </h2>
           <p className="text-xl text-foreground/70 font-medium">
-            Everything you need to know about DentaCare
+            Everything you need to know about Agoo Clinic
           </p>
         </div>
 

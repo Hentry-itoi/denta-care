@@ -77,18 +77,18 @@ export function Features() {
       id="features"
       className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-background"
     >
-      {/* Floating dental vectors throughout the section */}
+      {/* Floating clinic vectors throughout the section */}
       {/* <div className="absolute top-12 left-6 lg:left-12 z-20 hidden md:block">
-        <AnimatedTooth size={80} />
+        <AnimatedHealth size={80} />
       </div>
       <div className="absolute top-1/3 right-4 lg:right-10 z-20 hidden md:block">
-        <AnimatedDentalChair size={110} />
+        <AnimatedClinicChair size={110} />
       </div>
       <div className="absolute bottom-20 left-1/4 z-20 hidden lg:block">
-        <AnimatedToothbrush size={95} />
+        <AnimatedHealthbrush size={95} />
       </div>
       <div className="absolute bottom-10 right-1/4 z-20 hidden lg:block">
-        <AnimatedDentalMirror size={80} />
+        <AnimatedClinicMirror size={80} />
       </div>
       <div className="absolute top-2/3 left-6 z-20 hidden xl:block">
         <AnimatedAligner size={85} />
@@ -108,8 +108,7 @@ export function Features() {
             </span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto font-medium">
-            Comprehensive features designed for modern, high-volume dental
-            clinics
+          Comprehensive features designed for modern, high-volume clinics.
           </p>
         </div>
 

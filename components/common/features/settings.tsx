@@ -49,7 +49,7 @@ export default function SettingsPage() {
                 <span className="bg-gradient-to-r from-primary via-emerald-400 to-cyan-500 bg-clip-text text-transparent">Configuration & Workflow</span>
               </h1>
               <p className="text-xl text-foreground/75 max-w-lg leading-relaxed font-medium">
-                Customize every aspect of your dental practice—treatment templates, medicine catalogs, 
+                Customize every aspect of your clinic practice—treatment templates, medicine catalogs, 
                 multi-location setup, branding, and automated workflow triggers.
               </p>
                 <Button size="lg" linkHref='/contact' className="h-14 px-8 sm:px-10 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground text-base sm:text-lg font-bold shadow-xl shadow-primary/25 hover:shadow-2xl transition-all hover:scale-105">
@@ -73,7 +73,7 @@ export default function SettingsPage() {
             </div>
             <div className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ${sec1.isVisible ? 'animate-reveal-up' : 'opacity-0'}`} style={{ animationFillMode: 'both', animationDelay: '0.2s' }}>
               {[
-                { icon: ListTree, title: 'Procedure Catalog', desc: 'Create custom dental procedure lists with codes, descriptions, and pricing tiers.' },
+                { icon: ListTree, title: 'Procedure Catalog', desc: 'Create custom clinic procedure lists with codes, descriptions, and pricing tiers.' },
                 { icon: Pill, title: 'Medicine Database', desc: 'Build a medicine catalog with dosage templates for quick prescription writing.' },
                 { icon: MapPin, title: 'Multi-Location', desc: 'Manage multiple clinic branches with location-specific settings and staff.' },
                 { icon: Palette, title: 'Clinic Branding', desc: 'Custom logo, colors, letterhead, and receipt formatting for your brand.' },

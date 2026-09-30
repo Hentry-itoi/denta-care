@@ -4,7 +4,7 @@ export * from './atom';
 // Common Components (Landing & Features)
 export * from './common';
 
-// Dental Vectors & Illustrations
+// Clinic Vectors & Illustrations
 export * from './dental-vectors';
 
 // UI Primitives

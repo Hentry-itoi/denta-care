@@ -7,7 +7,7 @@ export function Stats() {
   const stats = [
     {
       value: "50+",
-      label: "Dental Practices",
+      label: "Clinic Practices",
       description: "Trusted by clinics nationwide",
       icon: Building2,
     },
@@ -33,9 +33,9 @@ export function Stats() {
 
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-emerald-500/[0.03] to-background border-y border-border/60 overflow-hidden">
-      {/* Dental vector decorations */}
+      {/* Clinic vector decorations */}
       {/* <div className="absolute top-8 right-8 lg:right-20 opacity-15 hidden md:block">
-        <AnimatedTooth size={80} />
+        <AnimatedHealth size={80} />
       </div>
       <div className="absolute bottom-8 left-8 lg:left-16 opacity-12 hidden md:block">
         <AnimatedHeartPulse size={70} />
@@ -51,7 +51,7 @@ export function Stats() {
           <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">
             Trusted By{" "}
             <span className="bg-gradient-to-r from-primary via-emerald-400 to-cyan-500 bg-clip-text text-transparent">
-              Dental Professionals
+              Clinic Professionals
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -74,13 +74,13 @@ export function Stats() {
 
                 <div className="relative z-10 space-y-6">
                   {/* Icon Badge */}
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
                     <IconComponent className="w-6 h-6" />
                   </div>
 
                   {/* Value & Labels */}
                   <div className="space-y-1">
-                    <div className="text-4xl lg:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-300 bg-clip-text text-transparent">
+                    <div className="text-4xl lg:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
                       {stat.value}
                     </div>
                     <p className="text-lg font-bold text-foreground pt-2">

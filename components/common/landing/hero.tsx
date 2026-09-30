@@ -12,21 +12,21 @@ export function Hero() {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-25 pointer-events-none"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl opacity-25 pointer-events-none"></div>
 
-      {/* Super Interactive Dental Vector Accents */}
+      {/* Super Interactive Clinic Vector Accents */}
       {/* <div className="absolute top-20 right-8 lg:right-16 z-20 hidden lg:block">
-        <AnimatedTooth size={110} />
+        <AnimatedHealth size={110} />
       </div>
       <div className="absolute bottom-12 left-6 lg:left-12 z-20 hidden lg:block">
-        <AnimatedToothbrush size={100} />
+        <AnimatedHealthbrush size={100} />
       </div>
       <div className="absolute top-1/2 left-4 -translate-y-1/2 z-20 hidden xl:block opacity-80">
-        <AnimatedDentalMirror size={85} />
+        <AnimatedClinicMirror size={85} />
       </div> */}
       {/* <div className="absolute top-28 left-1/3 z-20 hidden 2xl:block opacity-80">
         <AnimatedAligner size={90} />
       </div>
       <div className="absolute bottom-20 right-1/3 z-20 hidden xl:block opacity-80">
-        <AnimatedDentalChair size={120} />
+        <AnimatedClinicChair size={120} />
       </div> */}
 
       {/* <FloatingParticles className="opacity-25" /> */}
@@ -37,21 +37,21 @@ export function Hero() {
           <div className="space-y-8 animate-slide-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 shadow-sm">
               <span className="text-sm text-primary font-semibold">
-                Next-Gen Dental Clinic Platform
+                Next-Gen Clinic Platform
               </span>
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-balance leading-[1.1]">
               <span className="text-foreground">Elevate Your </span>
               <span className="bg-gradient-to-r from-primary via-emerald-400 to-cyan-500 bg-clip-text text-transparent">
-                Dental Business
+                Clinic Business
               </span>
             </h1>
 
             <p className="text-lg text-foreground/75 max-w-lg leading-relaxed font-medium">
-              Agoo Dental streamlines your entire practice—from smart scheduling
+              Agoo Clinic streamlines your entire practice—from smart scheduling
               and patient records to instant payments and AI analytics. Join
-              500+ successful dental clinics today!
+              500+ successful clinics today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -94,7 +94,7 @@ export function Hero() {
 
             {/* Interactive floating elements on screenshot */}
             {/* <div className="absolute -top-8 -left-8 z-30">
-              <AnimatedTooth size={65} />
+              <AnimatedHealth size={65} />
             </div>
             <div className="absolute -bottom-6 -right-6 z-30">
               <AnimatedImplant size={75} />
@@ -103,7 +103,7 @@ export function Hero() {
             <div className="relative rounded-2xl shadow-2xl overflow-hidden border border-border/80 bg-card group-hover:border-primary/50 transition-colors">
               <Image
                 src="/features/dashboard.png"
-                alt="DentaCare Practice Dashboard"
+                alt="Agoo Clinic Practice Dashboard"
                 width={1200}
                 height={800}
                 className="w-full h-full object-cover object-top hover:scale-[1.02] transition-transform duration-500"
