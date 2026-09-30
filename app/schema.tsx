@@ -2,7 +2,7 @@ export function SchemaMarkup() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Agoo Dental',
+    name: 'Agoo Clinic',
     url: 'https://agoodental.com',
     logo: 'https://agoodental.com/agoo-logo.png',
     description: 'Professional dental practice management software for modern clinics',
@@ -26,7 +26,7 @@ export function SchemaMarkup() {
   const softwareSchema = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'Agoo Dental',
+    name: 'Agoo Clinic',
     description: 'All-in-one dental practice management software for scheduling, patients, payments, and analytics',
     url: 'https://agoodental.com',
     applicationCategory: 'BusinessApplication',
@@ -51,15 +51,15 @@ export function SchemaMarkup() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'How can Agoo Dental help my practice?',
+        name: 'How can Agoo Clinic help my practice?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Agoo Dental streamlines appointment scheduling, patient management, payment processing, and provides detailed analytics to help you grow your practice.',
+          text: 'Agoo Clinic streamlines appointment scheduling, patient management, payment processing, and provides detailed analytics to help you grow your practice.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Is my data secure with Agoo Dental?',
+        name: 'Is my data secure with Agoo Clinic?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Yes, we use enterprise-grade encryption and HIPAA-compliant security measures to protect all your patient data.',
@@ -67,7 +67,7 @@ export function SchemaMarkup() {
       },
       {
         '@type': 'Question',
-        name: 'Can I try Agoo Dental for free?',
+        name: 'Can I try Agoo Clinic for free?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Yes, we offer a 7-Day free trial with full access to all features. No credit card required.',

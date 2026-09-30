@@ -49,7 +49,7 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-foreground/75 max-w-lg leading-relaxed font-medium">
-              Agoo Dental streamlines your entire practice—from smart scheduling
+              Agoo Clinic streamlines your entire practice—from smart scheduling
               and patient records to instant payments and AI analytics. Join
               500+ successful dental clinics today!
             </p>

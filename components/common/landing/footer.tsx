@@ -14,7 +14,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 py-16">
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
-            <Image src="/agoo-logo.png" alt="Agoo Dental" width={200} height={100} className="h-20 w-auto" />
+            <Image src="/agoo-logo.png" alt="Agoo Clinic" width={200} height={100} className="h-20 w-auto" />
             <p className="text-sm text-foreground/60 leading-relaxed max-w-sm">
               The all-in-one platform for modern dental practices. Simplify management, enhance patient care, and grow your business.
             </p>
@@ -83,7 +83,7 @@ export function Footer() {
         {/* Bottom Footer */}
         <div className="border-t border-border py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-foreground/60">
           <div>
-            © {currentYear} Agoo Dental. All rights reserved.
+            © {currentYear} Agoo Clinic. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>

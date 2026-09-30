@@ -162,7 +162,7 @@ export function Navbar() {
             <Link href="/" className="flex items-center gap-2 group">
               <Image
                 src="/agoo-logo.png"
-                alt="Agoo Dental Logo"
+                alt="Agoo Clinic Logo"
                 width={130}
                 height={52}
                 className="h-9 w-auto transition-transform group-hover:scale-105"

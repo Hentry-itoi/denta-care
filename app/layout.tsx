@@ -6,9 +6,9 @@ import { WhatsAppSticky } from "@/components/atom/WhatsAppSticky";
 import { Navbar, Footer } from "@/components/common/landing";
 
 export const metadata: Metadata = {
-  title: "Agoo Dental - Professional Dental Practice Management Software",
+  title: "Agoo Clinic - Professional Dental Practice Management Software",
   description:
-    "Agoo Dental is the all-in-one platform for modern dental clinics. Manage appointments, patients, payments, billing, and analytics with beautiful simplicity. Trusted by 500+ dental practices.",
+    "Agoo Clinic is the all-in-one platform for modern dental clinics. Manage appointments, patients, payments, billing, and analytics with beautiful simplicity. Trusted by 500+ dental practices.",
   keywords: [
     "dental practice management",
     "dental software",
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     "clinic management",
     "PWA dental app",
   ],
-  authors: [{ name: "Agoo Dental" }],
-  creator: "Agoo Dental",
-  publisher: "Agoo Dental",
+  authors: [{ name: "Agoo Clinic" }],
+  creator: "Agoo Clinic",
+  publisher: "Agoo Clinic",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://agoodental.com",
-    siteName: "Agoo Dental",
-    title: "Agoo Dental - Professional Dental Practice Management Software",
+    siteName: "Agoo Clinic",
+    title: "Agoo Clinic - Professional Dental Practice Management Software",
     description:
       "The all-in-one platform for modern dental clinics. Manage appointments, patients, payments, and analytics with beautiful simplicity.",
     images: [
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
         url: "/agoo-logo.png",
         width: 1200,
         height: 630,
-        alt: "Agoo Dental - Dental Practice Management",
+        alt: "Agoo Clinic - Dental Practice Management",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agoo Dental - Professional Dental Practice Management Software",
+    title: "Agoo Clinic - Professional Dental Practice Management Software",
     description:
       "The all-in-one platform for modern dental clinics. Manage appointments, patients, payments, and analytics.",
     images: ["/agoo-logo.png"],
