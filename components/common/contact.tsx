@@ -1,7 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, ArrowUpRight } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  ArrowUpRight,
+  CheckCircle2,
+} from "lucide-react";
 import { Button } from "@/components/atom/Button";
 
 export default function Contact() {
@@ -114,7 +122,43 @@ export default function Contact() {
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <AnimatePresence mode="wait">
+                  {submitted ? (
+                    <motion.div
+                      key="success-state"
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="rounded-3xl border border-emerald-200 bg-emerald-50 px-6 py-12 text-center"
+                    >
+                      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-white shadow-lg">
+                        <CheckCircle2 className="h-9 w-9" />
+                      </div>
+                      <h3 className="mb-2 text-2xl font-black text-foreground">
+                        Message Sent Successfully!
+                      </h3>
+                      <p className="mx-auto mb-6 max-w-md text-sm text-muted-foreground">
+                        Thank you for reaching out to Agoo Clinic. We have
+                        received your message and will contact you within 24
+                        business hours.
+                      </p>
+                      <Button
+                        type="button"
+                        onClick={() => setSubmitted(false)}
+                        className="rounded-full bg-primary px-6 py-3 font-bold text-primary-foreground shadow-md transition-colors hover:bg-primary/90"
+                      >
+                        Send Another Message
+                      </Button>
+                    </motion.div>
+                  ) : (
+                    <motion.form
+                      key="contact-form"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      onSubmit={handleSubmit}
+                      className="space-y-6"
+                    >
 
                   {/* Name + Email */}
                   <div className="grid gap-5 sm:grid-cols-2">
@@ -220,14 +264,6 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* Success Message */}
-                  {submitted && (
-                    <div className="rounded-xl border border-green-200 bg-green-50 p-4 text-sm font-medium text-green-700">
-                      Your message has been sent successfully. Our clinic
-                      team will get back to you shortly.
-                    </div>
-                  )}
-
                   {/* Error Message */}
                   {submitError && (
                     <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-700">
@@ -246,7 +282,9 @@ export default function Contact() {
                     Send Message
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
-                </form>
+                    </motion.form>
+                  )}
+                </AnimatePresence>
               </div>
 
               {/* =========================
@@ -286,7 +324,7 @@ export default function Contact() {
 
                       {/* Email */}
                       <a
-                        href="mailto:hello@agooclinic.com"
+                        href="mailto:info@agooclinic.com"
                         className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm transition-all duration-300 hover:translate-x-1 hover:bg-white/15"
                       >
                         <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-primary shadow-sm">
@@ -299,7 +337,7 @@ export default function Contact() {
                           </p>
 
                           <p className="mt-1 truncate text-sm font-semibold">
-                            hello@agooclinic.com
+                            info@agooclinic.com
                           </p>
                         </div>
 
@@ -311,7 +349,7 @@ export default function Contact() {
 
                       {/* Phone */}
                       <a
-                        href="tel:+918903489173"
+                        href="tel:+91861 023 4644"
                         className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm transition-all duration-300 hover:translate-x-1 hover:bg-white/15"
                       >
                         <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-primary shadow-sm">
@@ -324,7 +362,7 @@ export default function Contact() {
                           </p>
 
                           <p className="mt-1 text-sm font-semibold">
-                            +91 89034 89173
+                            +91 861 023 4644
                           </p>
                         </div>
 
@@ -346,7 +384,7 @@ export default function Contact() {
                           </p>
 
                           <p className="mt-1 text-sm font-semibold">
-                            Agoo Clinic
+                            Floor no 103,104, Subash street, Vadasery, Nagercoil - 629001, Kanyakumari district, Tamil Nadu, India
                           </p>
                         </div>
                       </div>
