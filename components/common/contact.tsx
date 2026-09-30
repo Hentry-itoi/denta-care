@@ -11,6 +11,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/atom/Button";
+import { FAQ } from "./landing";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -435,6 +436,7 @@ export default function Contact() {
             </div>
           </section>
         </div>
+          <FAQ/>
       </div>
     </div>
   );
