@@ -31,7 +31,7 @@ const systemModules: SystemModule[] = [
       "Live revenue counters",
       "Quick action shortcuts",
       "Patient activity timeline",
-      "Multi-dentist schedule",
+      "Multi-doctor schedule",
     ],
   },
   {
@@ -58,7 +58,7 @@ const systemModules: SystemModule[] = [
     image: "/features/users.png",
     badge: "Security",
     description:
-      "Grant precise permissions to clinic staff. Manage dentist availability, working hours, and monitor user login logs securely.",
+      "Grant precise permissions to clinic staff. Manage doctor availability, working hours, and monitor user login logs securely.",
     keyFeatures: [
       "Granular role permissions",
       "Staff duty rosters",
@@ -127,7 +127,7 @@ const systemModules: SystemModule[] = [
       "Exportable Excel & PDF",
       "Patient acquisition stats",
       "Revenue graphs",
-      "Dentist productivity",
+      "Doctor productivity",
     ],
   },
   {
@@ -138,7 +138,7 @@ const systemModules: SystemModule[] = [
     image: "/features/settings.png",
     badge: "Configuration",
     description:
-      "Customize DentaCare to match your exact clinic workflow. Configure procedure lists, medicine catalogs, and branding.",
+      "Customize Agoo Clinic to match your exact clinic workflow. Configure procedure lists, medicine catalogs, and branding.",
     keyFeatures: [
       "Procedure price lists",
       "Prescription templates",
@@ -180,7 +180,7 @@ export function ImageGallery() {
           </h2>
           <p className="text-foreground/75 text-lg font-medium">
             Take a guided visual tour through all 8 core application modules
-            powering modern, high-performing dental clinics.
+            powering modern, high-performing clinics.
           </p>
         </div>
 

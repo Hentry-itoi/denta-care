@@ -3,19 +3,25 @@ export function SchemaMarkup() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Agoo Clinic',
+<<<<<<< HEAD
     url: 'https://agoodental.com',
     logo: 'https://agoodental.com/agoo-logo.png',
     description: 'Professional dental practice management software for modern clinics',
+=======
+    url: 'https://agooclinic.com',
+    logo: 'https://agooclinic.com/agoo-logo.png',
+    description: 'Professional clinic practice management software for modern clinics',
+>>>>>>> 515f9a59b2bc23bb22b5494cb13b8d3424022397
     sameAs: [
-      'https://twitter.com/agooDental',
-      'https://facebook.com/agooDental',
-      'https://linkedin.com/company/agooDental',
+      'https://twitter.com/agooClinic',
+      'https://facebook.com/agooClinic',
+      'https://linkedin.com/company/agooClinic',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-123-4567',
       contactType: 'Customer Service',
-      email: 'support@agoodental.com',
+      email: 'support@agooclinic.com',
     },
     address: {
       '@type': 'PostalAddress',
@@ -27,8 +33,8 @@ export function SchemaMarkup() {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Agoo Clinic',
-    description: 'All-in-one dental practice management software for scheduling, patients, payments, and analytics',
-    url: 'https://agoodental.com',
+    description: 'All-in-one clinic practice management software for scheduling, patients, payments, and analytics',
+    url: 'https://agooclinic.com',
     applicationCategory: 'BusinessApplication',
     offers: {
       '@type': 'Offer',

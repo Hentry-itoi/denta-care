@@ -76,7 +76,7 @@ export default function AnalyticsPage() {
               <p className="text-xl text-foreground/75 max-w-lg leading-relaxed font-medium">
                 Transform raw clinic data into actionable visual dashboards.
                 Track revenue trends, patient retention rates, treatment
-                metrics, and dentist productivity.
+                metrics, and doctor productivity.
               </p>
               <Button
                 size="lg"
@@ -145,8 +145,8 @@ export default function AnalyticsPage() {
                 },
                 {
                   icon: LineChart,
-                  title: "Dentist Performance",
-                  desc: "Monitor individual dentist productivity, appointment counts, and revenue contribution.",
+                  title: "Doctor Performance",
+                  desc: "Monitor individual doctor productivity, appointment counts, and revenue contribution.",
                 },
                 {
                   icon: Eye,

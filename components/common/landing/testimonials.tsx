@@ -12,7 +12,7 @@ export function Testimonials() {
       initials: "PS",
       badgeBg: "bg-[#00c9a7]",
       content:
-        "Finally, practice software that feels modern and effortless. DentaCare has reduced our front-desk workload and improved patient satisfaction week after week!",
+        "Finally, practice software that feels modern and effortless. Agoo Clinic has reduced our front-desk workload and improved patient satisfaction week after week!",
       rating: 5,
     },
     {
@@ -30,7 +30,7 @@ export function Testimonials() {
       initials: "SG",
       badgeBg: "bg-[#5b73ff]",
       content:
-        "Quality analytics, amazing user interface, perfect workflow integration. DentaCare has completely won over our entire dental team!",
+        "Quality analytics, amazing user interface, perfect workflow integration. Agoo Clinic has completely won over our entire clinic team!",
       rating: 5,
     },
     {
@@ -66,7 +66,7 @@ export function Testimonials() {
       initials: "MN",
       badgeBg: "bg-[#06b6d4]",
       content:
-        "Managing inventory and lab orders used to be a headache. DentaCare streamlined everything into a few quick clicks.",
+        "Managing inventory and lab orders used to be a headache. Agoo Clinic streamlined everything into a few quick clicks.",
       rating: 5,
     },
     {
@@ -93,7 +93,7 @@ export function Testimonials() {
       initials: "SM",
       badgeBg: "bg-[#f97316]",
       content:
-        "Clean interface, quick response time, and zero learning curve for new staff. Best investment we made for our dental practice this year.",
+        "Clean interface, quick response time, and zero learning curve for new staff. Best investment we made for our clinic practice this year.",
       rating: 5,
     },
   ];
@@ -131,7 +131,7 @@ export function Testimonials() {
         {/* Header Section */}
         <div className="text-center mb-12 space-y-3">
           <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
-            Loved By Dental{" "}
+            Loved By Clinic{" "}
             <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">
               Professionals
             </span>

@@ -6,17 +6,23 @@ import { WhatsAppSticky } from "@/components/atom/WhatsAppSticky";
 import { Navbar, Footer } from "@/components/common/landing";
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: "Agoo Clinic - Professional Dental Practice Management Software",
   description:
     "Agoo Clinic is the all-in-one platform for modern dental clinics. Manage appointments, patients, payments, billing, and analytics with beautiful simplicity. Trusted by 500+ dental practices.",
+=======
+  title: "Agoo Clinic - Professional Clinic Practice Management Software",
+  description:
+    "Agoo Clinic is the all-in-one platform for modern medical clinics. Manage appointments, patients, payments, billing, and analytics with beautiful simplicity. Trusted by 500+ clinic practices.",
+>>>>>>> 515f9a59b2bc23bb22b5494cb13b8d3424022397
   keywords: [
-    "dental practice management",
-    "dental software",
+    "clinic practice management",
+    "clinic software",
     "appointment scheduling",
     "patient management",
-    "dental billing",
+    "clinic billing",
     "clinic management",
-    "PWA dental app",
+    "PWA clinic app",
   ],
   authors: [{ name: "Agoo Clinic" }],
   creator: "Agoo Clinic",
@@ -25,7 +31,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "DentaCare",
+    title: "Agoo Clinic",
   },
   formatDetection: {
     email: false,
@@ -35,26 +41,36 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
+<<<<<<< HEAD
     url: "https://agoodental.com",
     siteName: "Agoo Clinic",
     title: "Agoo Clinic - Professional Dental Practice Management Software",
+=======
+    url: "https://agooclinic.com",
+    siteName: "Agoo Clinic",
+    title: "Agoo Clinic - Professional Clinic Practice Management Software",
+>>>>>>> 515f9a59b2bc23bb22b5494cb13b8d3424022397
     description:
-      "The all-in-one platform for modern dental clinics. Manage appointments, patients, payments, and analytics with beautiful simplicity.",
+      "The all-in-one platform for modern medical clinics. Manage appointments, patients, payments, and analytics with beautiful simplicity.",
     images: [
       {
         url: "/agoo-logo.png",
         width: 1200,
         height: 630,
+<<<<<<< HEAD
         alt: "Agoo Clinic - Dental Practice Management",
+=======
+        alt: "Agoo Clinic - Clinic Practice Management",
+>>>>>>> 515f9a59b2bc23bb22b5494cb13b8d3424022397
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agoo Clinic - Professional Dental Practice Management Software",
+    title: "Agoo Clinic - Professional Clinic Practice Management Software",
     description:
-      "The all-in-one platform for modern dental clinics. Manage appointments, patients, payments, and analytics.",
+      "The all-in-one platform for modern medical clinics. Manage appointments, patients, payments, and analytics.",
     images: ["/agoo-logo.png"],
   },
   robots: {
@@ -70,18 +86,14 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://agoodental.com",
+    canonical: "https://agooclinic.com",
   },
   generator: "v0.app",
   icons: {
     icon: [
       {
         url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
+        url: "/icon-light-32x32.png",
       },
       {
         url: "/icon.svg",
@@ -93,11 +105,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  colorScheme: "light dark",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#090d16" },
-  ],
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
@@ -124,16 +132,6 @@ export default function RootLayout({
           id="theme-sw-script"
           dangerouslySetInnerHTML={{
             __html: `
-              (function() {
-                try {
-                  var theme = localStorage.getItem('theme');
-                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch(e) {}
-              })();
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
                   navigator.serviceWorker.register('/sw.js').catch(function(err) {

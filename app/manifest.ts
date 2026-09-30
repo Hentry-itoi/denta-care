@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Agoo DentaCare Practice Management',
-    short_name: 'DentaCare',
-    description: 'All-in-one dental practice management platform for appointments, patients, billing, and analytics.',
+    name: 'Agoo Agoo Clinic Practice Management',
+    short_name: 'Agoo Clinic',
+    description: 'All-in-one clinic practice management platform for appointments, patients, billing, and analytics.',
     start_url: '/',
     display: 'standalone',
     background_color: '#090d16',

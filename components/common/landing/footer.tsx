@@ -16,7 +16,7 @@ export function Footer() {
           <div className="md:col-span-2 space-y-4">
             <Image src="/agoo-logo.png" alt="Agoo Clinic" width={200} height={100} className="h-20 w-auto" />
             <p className="text-sm text-foreground/60 leading-relaxed max-w-sm">
-              The all-in-one platform for modern dental practices. Simplify management, enhance patient care, and grow your business.
+              The all-in-one platform for modern clinic practices. Simplify management, enhance patient management, and grow your business.
             </p>
             <div className="flex items-center gap-4 pt-4">
                <a

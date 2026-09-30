@@ -16,10 +16,10 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/atom/Button";
 import {
-  AnimatedTooth,
-  AnimatedDentalMirror,
-  AnimatedToothbrush,
-  AnimatedDentalChair,
+  AnimatedHealth,
+  AnimatedClinicMirror,
+  AnimatedHealthbrush,
+  AnimatedClinicChair,
   AnimatedShield,
   AnimatedHeartPulse,
 } from "@/components/dental-vectors";
@@ -52,17 +52,17 @@ const allFeatures = [
     title: "Smart Scheduling",
     tagline: "Zero missed appointments. Zero wasted chair time.",
     description:
-      "Our AI-powered scheduling engine automatically optimizes dentist availability, chair utilization, and patient flow to maximize revenue.",
+      "Our AI-powered scheduling engine automatically optimizes doctor availability, chair utilization, and patient flow to maximize revenue.",
     image: "/features/appointments.png",
     color: "from-blue-500 to-cyan-500",
     bgColor: "bg-blue-500/10",
     iconColor: "text-blue-500",
-    vector: AnimatedDentalChair,
+    vector: AnimatedClinicChair,
     highlights: [
       "Drag-and-drop appointment calendar with daily, weekly & monthly views",
       "Automated SMS, WhatsApp & email appointment reminders",
       "Smart conflict detection prevents double-booking",
-      "Chair and room assignment with color-coded dentist schedules",
+      "Chair and room assignment with color-coded doctor schedules",
       "Patient check-in tracker with real-time queue management",
       "Recurring appointment templates for treatment plans",
     ],
@@ -78,7 +78,7 @@ const allFeatures = [
     title: "Patient Records & Management",
     tagline: "Complete patient story. One unified profile.",
     description:
-      "Manage comprehensive patient profiles with dental charts, X-ray history, treatment plans, allergies, and insurance details in one unified record.",
+      "Manage comprehensive patient profiles with clinic charts, X-ray history, treatment plans, allergies, and insurance details in one unified record.",
     image: "/features/users.png",
     color: "from-cyan-500 to-teal-500",
     bgColor: "bg-cyan-500/10",
@@ -86,11 +86,11 @@ const allFeatures = [
     vector: AnimatedHeartPulse,
     highlights: [
       "Detailed patient profiles with medical history & allergies",
-      "Digital dental chart with tooth-by-tooth condition tracking",
+      "Digital clinic chart with health-by-health condition tracking",
       "Treatment plan builder with estimated cost breakdown",
       "Insurance verification and claim management",
       "Patient communication log and follow-up reminders",
-      "Family grouping for pediatric and family dentistry",
+      "Family grouping for pediatric and family doctorry",
     ],
     stats: [
       { value: "500+", label: "Clinics trust us" },
@@ -104,12 +104,12 @@ const allFeatures = [
     title: "Billing & Invoice Automation",
     tagline: "Get paid faster. Bill smarter.",
     description:
-      "Generate professional dental invoices with itemized treatment breakdowns, process multi-method payments, and track overdue balances automatically.",
+      "Generate professional clinic invoices with itemized treatment breakdowns, process multi-method payments, and track overdue balances automatically.",
     image: "/features/invoices.png",
     color: "from-emerald-500 to-green-500",
     bgColor: "bg-emerald-500/10",
     iconColor: "text-emerald-500",
-    vector: AnimatedTooth,
+    vector: AnimatedHealth,
     highlights: [
       "Itemized invoices with procedure codes and descriptions",
       "Split-payment support: cash, card, UPI, insurance",
@@ -130,17 +130,17 @@ const allFeatures = [
     title: "Real-time Analytics & Reports",
     tagline: "See the data. Make the decisions.",
     description:
-      "Transform raw clinic data into visual dashboards with revenue trends, patient retention rates, treatment success metrics, and dentist productivity reports.",
+      "Transform raw clinic data into visual dashboards with revenue trends, patient retention rates, treatment success metrics, and doctor productivity reports.",
     image: "/features/reports.png",
     color: "from-purple-500 to-violet-500",
     bgColor: "bg-purple-500/10",
     iconColor: "text-purple-500",
-    vector: AnimatedDentalMirror,
+    vector: AnimatedClinicMirror,
     highlights: [
       "Real-time revenue dashboard with daily/weekly/monthly comparisons",
       "Patient acquisition and retention analytics",
       "Treatment-wise revenue breakdown and popularity metrics",
-      "Dentist performance and productivity reports",
+      "Doctor performance and productivity reports",
       "Expense tracking with profit margin calculation",
       "Excel & PDF report export for accounting teams",
     ],
@@ -182,14 +182,14 @@ const allFeatures = [
     title: "Clinic Configuration & Workflow",
     tagline: "Your clinic, your rules.",
     description:
-      "Customize every aspect of your dental practice: treatment templates, medicine catalogs, multi-location setup, branding, and automated workflow triggers.",
+      "Customize every aspect of your clinic practice: treatment templates, medicine catalogs, multi-location setup, branding, and automated workflow triggers.",
     image: "/features/settings.png",
     color: "from-rose-500 to-pink-500",
     bgColor: "bg-rose-500/10",
     iconColor: "text-rose-500",
-    vector: AnimatedToothbrush,
+    vector: AnimatedHealthbrush,
     highlights: [
-      "Custom dental procedure catalog with pricing",
+      "Custom clinic procedure catalog with pricing",
       "Prescription template builder for common treatments",
       "Multi-location clinic management and switching",
       "Clinic branding (logo, colors, letterhead, receipt format)",
@@ -207,7 +207,7 @@ const allFeatures = [
 export default function FeaturesPage() {
   return (
     <div className="bg-background text-foreground">
-        {/* ====== HERO SECTION with dental vectors ====== */}
+        {/* ====== HERO SECTION with clinic vectors ====== */}
         <section className="relative py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
           {/* Animated gradient blobs */}
           <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary/30 to-cyan-500/20 rounded-full blur-3xl animate-morph-blob opacity-30" />
@@ -220,18 +220,18 @@ export default function FeaturesPage() {
             style={{ animationDelay: "2s" }}
           />
 
-          {/* Floating dental vectors */}
+          {/* Floating clinic vectors */}
           <div className="absolute top-16 left-8 lg:left-20 opacity-40 hidden md:block">
-            <AnimatedTooth size={80} />
+            <AnimatedHealth size={80} />
           </div>
           <div className="absolute top-24 right-12 lg:right-32 opacity-30 hidden md:block">
-            <AnimatedDentalMirror size={70} />
+            <AnimatedClinicMirror size={70} />
           </div>
           <div className="absolute bottom-20 left-16 opacity-25 hidden lg:block">
-            <AnimatedToothbrush size={90} />
+            <AnimatedHealthbrush size={90} />
           </div>
           <div className="absolute bottom-16 right-20 opacity-20 hidden lg:block">
-            <AnimatedDentalChair size={100} />
+            <AnimatedClinicChair size={100} />
           </div>
           {/* 
           <FloatingParticles className="opacity-30" /> */}
@@ -245,7 +245,7 @@ export default function FeaturesPage() {
             >
               <span className="text-foreground">Powerful Features for </span>
               <span className="bg-gradient-to-r from-primary via-cyan-400 to-emerald-400 gradient-text-animated">
-                Modern Dental Clinics
+                Modern Clinics
               </span>
             </h1>
 
@@ -253,7 +253,7 @@ export default function FeaturesPage() {
               className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed animate-reveal-up stagger-2"
               style={{ animationFillMode: "both" }}
             >
-              Every tool your dental practice needs—from appointment scheduling
+              Every tool your clinic practice needs—from appointment scheduling
               and patient records to automated billing, analytics dashboards,
               and enterprise-grade security. All in one platform.
             </p>
@@ -303,7 +303,7 @@ export default function FeaturesPage() {
 
           <div className="max-w-4xl mx-auto text-center relative z-10 space-y-8">
             <div className="flex justify-center">
-              <AnimatedTooth size={80} />
+              <AnimatedHealth size={80} />
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold">
               Ready to{" "}
@@ -312,7 +312,7 @@ export default function FeaturesPage() {
               </span>
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Join 500+ dental clinics who trust DentaCare to manage their
+              Join 500+ clinics who trust Agoo Clinic to manage their
               operations, patients, and revenue growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -471,7 +471,7 @@ function FeatureSection({
             }`}
             style={{ animationFillMode: "both", animationDelay: "0.2s" }}
           >
-            {/* Floating dental vector */}
+            {/* Floating clinic vector */}
             <div
               className={`absolute ${
                 isEven ? "-top-8 -right-4" : "-top-8 -left-4"
@@ -486,7 +486,7 @@ function FeatureSection({
                 {[0, 1, 2, 3].map((i) => (
                   <div
                     key={i}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-dental-orbit"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-clinic-orbit"
                     style={{
                       animationDelay: `${i * 3}s`,
                       animationDuration: `${12 + i * 2}s`,

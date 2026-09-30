@@ -135,12 +135,12 @@ export function Pricing() {
       id="pricing"
       className="relative py-24 px-4 sm:px-6 lg:px-8 bg-background overflow-hidden border-t border-border/80"
     >
-      {/* Dental Vector Accents */}
+      {/* Clinic Vector Accents */}
       {/* <div className="absolute top-12 left-6 z-20 hidden md:block opacity-90">
-        <AnimatedTooth size={80} />
+        <AnimatedHealth size={80} />
       </div>
       <div className="absolute bottom-16 right-6 z-20 hidden md:block opacity-90">
-        <AnimatedToothbrush size={90} />
+        <AnimatedHealthbrush size={90} />
       </div>
       <div className="absolute top-1/2 left-4 -translate-y-1/2 z-20 hidden xl:block opacity-80">
         <AnimatedAligner size={75} />
@@ -161,7 +161,7 @@ export function Pricing() {
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-            Choose the perfect plan for your dental clinic
+            Choose the perfect plan for your clinic
           </p>
 
           {/* Navigation Tabs */}
@@ -189,7 +189,7 @@ export function Pricing() {
                 }`}
               >
                 <span>Annually</span>
-                <span className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-[11px] px-2.5 py-0.5 rounded-full font-bold">
+                <span className="bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 text-[11px] px-2.5 py-0.5 rounded-full font-bold">
                   Save 10%
                 </span>
               </button>
@@ -242,7 +242,7 @@ export function Pricing() {
                       </span>
                     )}
                     {'discount' in plan && Boolean(plan.discount) && (
-                      <span className="ml-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase whitespace-nowrap">
+                      <span className="ml-1 bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase whitespace-nowrap">
                         {String(plan.discount)}
                       </span>
                     )}

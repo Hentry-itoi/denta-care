@@ -8,17 +8,17 @@ export function CTA() {
   return (
     <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-background border-t border-border/80">
       {/* Background Decorative Blur Orbs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-emerald-500/15 dark:bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-emerald-500/15 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Dental Vector Accents */}
+      {/* Clinic Vector Accents */}
       {/* <div className="absolute top-8 left-8 z-20 hidden md:block opacity-90">
-        <AnimatedTooth size={90} />
+        <AnimatedHealth size={90} />
       </div>
       <div className="absolute bottom-8 right-8 z-20 hidden md:block opacity-90">
-        <AnimatedToothbrush size={95} />
+        <AnimatedHealthbrush size={95} />
       </div>
       <div className="absolute top-1/2 left-6 -translate-y-1/2 z-20 hidden xl:block opacity-80">
-        <AnimatedDentalMirror size={80} />
+        <AnimatedClinicMirror size={80} />
       </div>
       <div className="absolute top-10 right-12 z-20 hidden xl:block opacity-80">
         <AnimatedAligner size={85} />
@@ -36,7 +36,7 @@ export function CTA() {
           </div> */}
 
           {/* Top Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-bold tracking-wide uppercase">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 text-xs sm:text-sm font-bold tracking-wide uppercase">
             <span>Transform Your Practice Today</span>
           </div>
 
@@ -44,13 +44,13 @@ export function CTA() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground max-w-3xl mx-auto leading-[1.15]">
             Ready To Elevate Your{' '}
             <span className="bg-gradient-to-r from-primary via-emerald-400 to-cyan-500 bg-clip-text text-transparent">
-              Dental Practice?
+              Clinic Practice?
             </span>
           </h2>
 
           {/* Subtitle */}
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium">
-            Join hundreds of dental clinics streamlining operations, reducing administrative workload, and delivering top-tier patient care.
+            Join hundreds of clinics streamlining operations, reducing administrative workload, and delivering top-tier patient management.
           </p>
 
           {/* Action Buttons */}

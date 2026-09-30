@@ -54,7 +54,7 @@ export default function SchedulingPage() {
                 </h1>
                 <p className="text-xl text-foreground/75 max-w-lg leading-relaxed font-medium">
                   Never miss an appointment again. Our intelligent calendar system automates reminders, 
-                  prevents double-booking, and maximizes chair utilization across your entire dental practice.
+                  prevents double-booking, and maximizes chair utilization across your entire clinic practice.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-2">
                     <Button size="lg" linkHref='/contact' className="h-14 px-8 sm:px-10 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground text-base sm:text-lg font-bold shadow-xl shadow-primary/25 hover:shadow-2xl transition-all hover:scale-105">
@@ -76,13 +76,13 @@ export default function SchedulingPage() {
           <div className="max-w-7xl mx-auto space-y-12">
             <div className={`text-center space-y-4 ${sec1.isVisible ? 'animate-reveal-up' : 'opacity-0'}`} style={{ animationFillMode: 'both' }}>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Everything Your Schedule Needs</h2>
-              <p className="text-foreground/75 max-w-2xl mx-auto font-medium">From solo practices to multi-branch dental networks</p>
+              <p className="text-foreground/75 max-w-2xl mx-auto font-medium">From solo practices to multi-branch clinic networks</p>
             </div>
             <div className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ${sec1.isVisible ? 'animate-reveal-up' : 'opacity-0'}`} style={{ animationFillMode: 'both', animationDelay: '0.2s' }}>
               {[
-                { icon: Calendar, title: 'Multi-View Calendar', desc: 'Switch between day, week, and month views. Color-coded by dentist and procedure type.' },
+                { icon: Calendar, title: 'Multi-View Calendar', desc: 'Switch between day, week, and month views. Color-coded by doctor and procedure type.' },
                 { icon: Bell, title: 'Auto Reminders', desc: 'Patients receive SMS, WhatsApp, and email reminders 24h and 1h before their appointment.' },
-                { icon: Users, title: 'Multi-Dentist Support', desc: 'Manage schedules for multiple dentists and hygienists from one unified dashboard.' },
+                { icon: Users, title: 'Multi-Doctor Support', desc: 'Manage schedules for multiple doctors and hygienists from one unified dashboard.' },
                 { icon: Zap, title: 'Conflict Detection', desc: 'Instant alerts when bookings overlap. Smart suggestions for the next available slot.' },
                 { icon: Clock, title: 'Wait-Time Tracking', desc: 'Monitor real-time patient queue and average wait times. Improve patient satisfaction.' },
                 { icon: Smartphone, title: 'Mobile Booking', desc: 'Patients can book online from any device. Self-service rescheduling and cancellation.' }
@@ -108,9 +108,9 @@ export default function SchedulingPage() {
             </div>
             <div className={`space-y-12 ${sec2.isVisible ? 'animate-reveal-up' : 'opacity-0'}`} style={{ animationFillMode: 'both', animationDelay: '0.2s' }}>
               {[
-                { step: '01', title: 'Set Up Your Practice Calendar', desc: 'Define working hours, chair availability, and dentist schedules. Add break times and holidays.' },
+                { step: '01', title: 'Set Up Your Practice Calendar', desc: 'Define working hours, chair availability, and doctor schedules. Add break times and holidays.' },
                 { step: '02', title: 'Patients Book & Get Reminded', desc: 'Patients book online or in-clinic. Automated reminders go out via SMS, WhatsApp, or email.' },
-                { step: '03', title: 'Track & Optimize', desc: 'Monitor no-show rates, average appointment times, and chair utilization. DentaCare optimizes your schedule automatically.' }
+                { step: '03', title: 'Track & Optimize', desc: 'Monitor no-show rates, average appointment times, and chair utilization. Agoo Clinic optimizes your schedule automatically.' }
               ].map((s, i) => (
                 <div key={i} className="flex gap-6 items-start group">
                   <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-emerald-400 flex items-center justify-center text-primary-foreground font-extrabold text-lg shadow-lg group-hover:scale-110 transition-transform">

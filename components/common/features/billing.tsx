@@ -74,7 +74,7 @@ export default function BillingPage() {
                 </span>
               </h1>
               <p className="text-xl text-foreground/75 max-w-lg leading-relaxed font-medium">
-                Professional dental invoices with itemized treatment breakdowns.
+                Professional clinic invoices with itemized treatment breakdowns.
                 Process payments via cash, card, UPI, or insurance—and track
                 overdue balances automatically.
               </p>

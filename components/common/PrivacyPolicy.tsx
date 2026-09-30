@@ -1,10 +1,16 @@
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen py-24 bg-background">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors mb-8">
+          <ArrowLeft className="w-4 h-4" />
+          Back to Home
+        </Link>
         <h1 className="text-4xl font-bold tracking-tight mb-8">Privacy Policy</h1>
-        <div className="prose prose-sm sm:prose-base dark:prose-invert max-w-none text-foreground/80 space-y-6">
+        <div className="prose prose-sm sm:prose-base max-w-none text-foreground/80 space-y-6">
           <p>Last updated: {new Date().toLocaleDateString()}</p>
           
           <section className="space-y-4">
@@ -40,7 +46,7 @@ export default function PrivacyPolicy() {
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-foreground">5. Contact Us</h2>
             <p>If you have any questions about this privacy policy or our privacy practices, please contact us at:</p>
-            <p>Email: privacy@agoodental.com</p>
+            <p>Email: privacy@agooclinic.com</p>
           </section>
         </div>
       </div>

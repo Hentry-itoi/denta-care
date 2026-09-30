@@ -73,7 +73,7 @@ export default function PatientsPage() {
                 </span>
               </h1>
               <p className="text-xl text-foreground/75 max-w-lg leading-relaxed font-medium">
-                One unified profile for every patient—medical history, dental
+                One unified profile for every patient—medical history, clinic
                 charts, X-rays, treatment plans, prescriptions, insurance, and
                 family connections.
               </p>
@@ -147,13 +147,13 @@ export default function PatientsPage() {
                 },
                 {
                   icon: UserCheck,
-                  title: "Digital Dental Charts",
-                  desc: "Interactive tooth-by-tooth charting with condition, procedure, and notes for each tooth.",
+                  title: "Digital Clinic Charts",
+                  desc: "Interactive health-by-health charting with condition, procedure, and notes for each health.",
                 },
                 {
                   icon: Baby,
                   title: "Family Accounts",
-                  desc: "Link family members together for pediatric and family dentistry workflows.",
+                  desc: "Link family members together for pediatric and family doctorry workflows.",
                 },
                 {
                   icon: Users,

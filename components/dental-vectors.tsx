@@ -3,11 +3,11 @@
 import React, { useState } from 'react'
 
 /**
- * Super Interactive Animated Dental SVG Vectors.
+ * Super Interactive Animated Clinic SVG Vectors.
  * Includes hover animations, click ripple/sparkle effects, dynamic glowing, and floating particles.
  */
 
-export function AnimatedTooth({ className = '', size = 120, interactive = true }: { className?: string; size?: number; interactive?: boolean }) {
+export function AnimatedHealth({ className = '', size = 120, interactive = true }: { className?: string; size?: number; interactive?: boolean }) {
   const [clicked, setClicked] = useState(false)
 
   const handleClick = () => {
@@ -20,7 +20,7 @@ export function AnimatedTooth({ className = '', size = 120, interactive = true }
     <div
       onClick={handleClick}
       className={`relative inline-block cursor-pointer transition-all duration-300 transform hover:scale-115 hover:rotate-3 group ${className}`}
-      title="Click for Tooth Sparkle!"
+      title="Click for Health Sparkle!"
     >
       <svg
         width={size}
@@ -31,7 +31,7 @@ export function AnimatedTooth({ className = '', size = 120, interactive = true }
         className={`animate-float drop-shadow-[0_0_15px_rgba(0,212,170,0.3)] transition-all ${clicked ? 'scale-125 duration-150' : ''}`}
       >
         {/* Outer Glow Circle */}
-        <circle cx="60" cy="55" r="48" fill="url(#toothGlow)" opacity="0.35" className="group-hover:opacity-60 transition-opacity">
+        <circle cx="60" cy="55" r="48" fill="url(#healthGlow)" opacity="0.35" className="group-hover:opacity-60 transition-opacity">
           <animate attributeName="r" values="42;50;42" dur="3s" repeatCount="indefinite" />
           <animate attributeName="opacity" values="0.25;0.5;0.25" dur="3s" repeatCount="indefinite" />
         </circle>
@@ -44,11 +44,11 @@ export function AnimatedTooth({ className = '', size = 120, interactive = true }
           </circle>
         )}
 
-        {/* Main Tooth Body */}
+        {/* Main Health Body */}
         <path
           d="M40 30C40 20 50 12 60 12C70 12 80 20 80 30V55C80 62 77 68 73 72L70 90C69 95 65 98 60 98C55 98 51 95 50 90L47 72C43 68 40 62 40 55V30Z"
-          fill="url(#toothFill)"
-          stroke="url(#toothStroke)"
+          fill="url(#healthFill)"
+          stroke="url(#healthStroke)"
           strokeWidth="2.5"
           className="transition-all duration-300 group-hover:stroke-[3px]"
         />
@@ -59,9 +59,9 @@ export function AnimatedTooth({ className = '', size = 120, interactive = true }
         </ellipse>
         <path d="M46 32 C 48 24, 54 20, 60 20" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
 
-        {/* Tooth Roots */}
-        <line x1="53" y1="72" x2="51" y2="88" stroke="url(#toothStroke)" strokeWidth="2" opacity="0.6" />
-        <line x1="67" y1="72" x2="69" y2="88" stroke="url(#toothStroke)" strokeWidth="2" opacity="0.6" />
+        {/* Health Roots */}
+        <line x1="53" y1="72" x2="51" y2="88" stroke="url(#healthStroke)" strokeWidth="2" opacity="0.6" />
+        <line x1="67" y1="72" x2="69" y2="88" stroke="url(#healthStroke)" strokeWidth="2" opacity="0.6" />
 
         {/* Interactive Crown Sparkle Stars */}
         <g className="transition-transform duration-300 group-hover:scale-125">
@@ -74,16 +74,16 @@ export function AnimatedTooth({ className = '', size = 120, interactive = true }
         </g>
 
         <defs>
-          <radialGradient id="toothGlow" cx="0.5" cy="0.5" r="0.5">
+          <radialGradient id="healthGlow" cx="0.5" cy="0.5" r="0.5">
             <stop stopColor="#00d4aa" />
             <stop offset="1" stopColor="#0891b2" stopOpacity="0" />
           </radialGradient>
-          <linearGradient id="toothFill" x1="40" y1="12" x2="80" y2="98">
+          <linearGradient id="healthFill" x1="40" y1="12" x2="80" y2="98">
             <stop stopColor="#f0fdfa" />
             <stop offset="0.5" stopColor="#ccfbf1" />
             <stop offset="1" stopColor="#99f6e4" />
           </linearGradient>
-          <linearGradient id="toothStroke" x1="40" y1="12" x2="80" y2="98">
+          <linearGradient id="healthStroke" x1="40" y1="12" x2="80" y2="98">
             <stop stopColor="#00d4aa" />
             <stop offset="1" stopColor="#0891b2" />
           </linearGradient>
@@ -98,7 +98,7 @@ export function AnimatedTooth({ className = '', size = 120, interactive = true }
   )
 }
 
-export function AnimatedDentalMirror({ className = '', size = 100, interactive = true }: { className?: string; size?: number; interactive?: boolean }) {
+export function AnimatedClinicMirror({ className = '', size = 100, interactive = true }: { className?: string; size?: number; interactive?: boolean }) {
   const [rotated, setRotated] = useState(false)
 
   return (
@@ -151,7 +151,7 @@ export function AnimatedDentalMirror({ className = '', size = 100, interactive =
   )
 }
 
-export function AnimatedToothbrush({ className = '', size = 110, interactive = true }: { className?: string; size?: number; interactive?: boolean }) {
+export function AnimatedHealthbrush({ className = '', size = 110, interactive = true }: { className?: string; size?: number; interactive?: boolean }) {
   const [bubbles, setBubbles] = useState(false)
 
   const handleBrush = () => {
@@ -226,7 +226,7 @@ export function AnimatedToothbrush({ className = '', size = 110, interactive = t
   )
 }
 
-export function AnimatedDentalChair({ className = '', size = 140, interactive = true }: { className?: string; size?: number; interactive?: boolean }) {
+export function AnimatedClinicChair({ className = '', size = 140, interactive = true }: { className?: string; size?: number; interactive?: boolean }) {
   const [recline, setRecline] = useState(false)
 
   return (
@@ -514,7 +514,7 @@ export function AnimatedAligner({ className = '', size = 110, interactive = true
           <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" />
         </path>
 
-        {/* Tooth slot ridges */}
+        {/* Health slot ridges */}
         {[30, 42, 55, 68, 80].map((x, i) => (
           <circle key={i} cx={x} cy={50 + (i === 2 ? -8 : i === 1 || i === 3 ? -5 : 0)} r="5" stroke="white" strokeWidth="1.5" fill="none" opacity="0.6" />
         ))}
@@ -536,7 +536,7 @@ export function AnimatedAligner({ className = '', size = 110, interactive = true
   )
 }
 
-/** New Interactive Vector 2: Dental Implant Precision Scale */
+/** New Interactive Vector 2: Clinic Implant Precision Scale */
 export function AnimatedImplant({ className = '', size = 110, interactive = true }: { className?: string; size?: number; interactive?: boolean }) {
   const [active, setActive] = useState(false)
 
