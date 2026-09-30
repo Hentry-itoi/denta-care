@@ -3,15 +3,9 @@ export function SchemaMarkup() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Agoo Clinic',
-<<<<<<< HEAD
-    url: 'https://agoodental.com',
-    logo: 'https://agoodental.com/agoo-logo.png',
-    description: 'Professional dental practice management software for modern clinics',
-=======
     url: 'https://agooclinic.com',
     logo: 'https://agooclinic.com/agoo-logo.png',
     description: 'Professional clinic practice management software for modern clinics',
->>>>>>> 515f9a59b2bc23bb22b5494cb13b8d3424022397
     sameAs: [
       'https://twitter.com/agooClinic',
       'https://facebook.com/agooClinic',
