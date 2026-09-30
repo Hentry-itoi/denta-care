@@ -6,15 +6,9 @@ import { WhatsAppSticky } from "@/components/atom/WhatsAppSticky";
 import { Navbar, Footer } from "@/components/common/landing";
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
-  title: "Agoo Clinic - Professional Dental Practice Management Software",
-  description:
-    "Agoo Clinic is the all-in-one platform for modern dental clinics. Manage appointments, patients, payments, billing, and analytics with beautiful simplicity. Trusted by 500+ dental practices.",
-=======
   title: "Agoo Clinic - Professional Clinic Practice Management Software",
   description:
     "Agoo Clinic is the all-in-one platform for modern medical clinics. Manage appointments, patients, payments, billing, and analytics with beautiful simplicity. Trusted by 500+ clinic practices.",
->>>>>>> 515f9a59b2bc23bb22b5494cb13b8d3424022397
   keywords: [
     "clinic practice management",
     "clinic software",
@@ -41,15 +35,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-<<<<<<< HEAD
-    url: "https://agoodental.com",
-    siteName: "Agoo Clinic",
-    title: "Agoo Clinic - Professional Dental Practice Management Software",
-=======
     url: "https://agooclinic.com",
     siteName: "Agoo Clinic",
     title: "Agoo Clinic - Professional Clinic Practice Management Software",
->>>>>>> 515f9a59b2bc23bb22b5494cb13b8d3424022397
     description:
       "The all-in-one platform for modern medical clinics. Manage appointments, patients, payments, and analytics with beautiful simplicity.",
     images: [
@@ -57,11 +45,7 @@ export const metadata: Metadata = {
         url: "/agoo-logo.png",
         width: 1200,
         height: 630,
-<<<<<<< HEAD
-        alt: "Agoo Clinic - Dental Practice Management",
-=======
         alt: "Agoo Clinic - Clinic Practice Management",
->>>>>>> 515f9a59b2bc23bb22b5494cb13b8d3424022397
         type: "image/png",
       },
     ],
