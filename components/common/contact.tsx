@@ -80,8 +80,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 text-foreground">
-      <div className="pb-20">
+    <div className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 text-foreground p-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* Header */}
@@ -438,6 +437,5 @@ export default function Contact() {
         </div>
           <FAQ/>
       </div>
-    </div>
   );
 }
